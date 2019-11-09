@@ -20,6 +20,21 @@
 		AA9D643C23767F95007130CA /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9D643B23767F95007130CA /* RxRelay.framework */; };
 		AA9D643F23767F98007130CA /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9D643E23767F98007130CA /* RxSwift.framework */; };
 		AA9D644223768249007130CA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AA9D644123768249007130CA /* README.md */; };
+		AADA8B4B2376E362000AE3BA /* MainSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADA8B4A2376E362000AE3BA /* MainSteps.swift */; };
+		AADA8B4D2376E407000AE3BA /* MainFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADA8B4C2376E407000AE3BA /* MainFlow.swift */; };
+		AADA8B522376E51C000AE3BA /* AllMoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADA8B512376E51C000AE3BA /* AllMoviesViewModel.swift */; };
+		AADA8B552376E62E000AE3BA /* AllMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADA8B532376E62E000AE3BA /* AllMoviesViewController.swift */; };
+		AADA8B562376E62E000AE3BA /* AllMoviesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AADA8B542376E62E000AE3BA /* AllMoviesViewController.xib */; };
+		AADA8B5A2376EADB000AE3BA /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADA8B592376EADB000AE3BA /* Action.framework */; };
+		AADA8B5E2376EADE000AE3BA /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADA8B5D2376EADE000AE3BA /* Differentiator.framework */; };
+		AADA8B612376EAE1000AE3BA /* Reusable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADA8B602376EAE1000AE3BA /* Reusable.framework */; };
+		AADA8B642376EAE6000AE3BA /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADA8B632376EAE6000AE3BA /* RxDataSources.framework */; };
+		AADA8B672376EAE9000AE3BA /* RxOptional.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADA8B662376EAE9000AE3BA /* RxOptional.framework */; };
+		AADA8B6A2376EAEE000AE3BA /* RxSwiftExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADA8B692376EAEE000AE3BA /* RxSwiftExt.framework */; };
+		AADA8B6F2376ED8A000AE3BA /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADA8B6E2376ED8A000AE3BA /* MovieDetailViewModel.swift */; };
+		AADA8B722376EDA1000AE3BA /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADA8B702376EDA1000AE3BA /* MovieDetailViewController.swift */; };
+		AADA8B732376EDA1000AE3BA /* MovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AADA8B712376EDA1000AE3BA /* MovieDetailViewController.xib */; };
+		AADA8B752376F234000AE3BA /* MainStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADA8B742376F234000AE3BA /* MainStepper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +66,21 @@
 		AA9D643B23767F95007130CA /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		AA9D643E23767F98007130CA /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		AA9D644123768249007130CA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		AADA8B4A2376E362000AE3BA /* MainSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSteps.swift; sourceTree = "<group>"; };
+		AADA8B4C2376E407000AE3BA /* MainFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlow.swift; sourceTree = "<group>"; };
+		AADA8B512376E51C000AE3BA /* AllMoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMoviesViewModel.swift; sourceTree = "<group>"; };
+		AADA8B532376E62E000AE3BA /* AllMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMoviesViewController.swift; sourceTree = "<group>"; };
+		AADA8B542376E62E000AE3BA /* AllMoviesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllMoviesViewController.xib; sourceTree = "<group>"; };
+		AADA8B592376EADB000AE3BA /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/iOS/Action.framework; sourceTree = "<group>"; };
+		AADA8B5D2376EADE000AE3BA /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Carthage/Build/iOS/Differentiator.framework; sourceTree = "<group>"; };
+		AADA8B602376EAE1000AE3BA /* Reusable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reusable.framework; path = Carthage/Build/iOS/Reusable.framework; sourceTree = "<group>"; };
+		AADA8B632376EAE6000AE3BA /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
+		AADA8B662376EAE9000AE3BA /* RxOptional.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxOptional.framework; path = Carthage/Build/iOS/RxOptional.framework; sourceTree = "<group>"; };
+		AADA8B692376EAEE000AE3BA /* RxSwiftExt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwiftExt.framework; path = Carthage/Build/iOS/RxSwiftExt.framework; sourceTree = "<group>"; };
+		AADA8B6E2376ED8A000AE3BA /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
+		AADA8B702376EDA1000AE3BA /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		AADA8B712376EDA1000AE3BA /* MovieDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailViewController.xib; sourceTree = "<group>"; };
+		AADA8B742376F234000AE3BA /* MainStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStepper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +88,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AADA8B5E2376EADE000AE3BA /* Differentiator.framework in Frameworks */,
+				AADA8B672376EAE9000AE3BA /* RxOptional.framework in Frameworks */,
+				AADA8B5A2376EADB000AE3BA /* Action.framework in Frameworks */,
 				AA9D643F23767F98007130CA /* RxSwift.framework in Frameworks */,
+				AADA8B6A2376EAEE000AE3BA /* RxSwiftExt.framework in Frameworks */,
+				AADA8B642376EAE6000AE3BA /* RxDataSources.framework in Frameworks */,
 				AA9D643C23767F95007130CA /* RxRelay.framework in Frameworks */,
 				AA9D643623767F90007130CA /* RxCocoa.framework in Frameworks */,
 				AA9D643923767F92007130CA /* RxFlow.framework in Frameworks */,
+				AADA8B612376EAE1000AE3BA /* Reusable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +135,8 @@
 		AA9D64082376754D007130CA /* Cathay */ = {
 			isa = PBXGroup;
 			children = (
+				AADA8B4E2376E4ED000AE3BA /* Feature */,
+				AADA8B492376E336000AE3BA /* Coordinate */,
 				AA9D64092376754D007130CA /* AppDelegate.swift */,
 				AA9D640B2376754D007130CA /* SceneDelegate.swift */,
 				AA9D640D2376754D007130CA /* ViewController.swift */,
@@ -122,13 +160,90 @@
 		AA9D643023767F8D007130CA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AADA8B602376EAE1000AE3BA /* Reusable.framework */,
 				AA9D643E23767F98007130CA /* RxSwift.framework */,
 				AA9D643B23767F95007130CA /* RxRelay.framework */,
+				AADA8B662376EAE9000AE3BA /* RxOptional.framework */,
+				AADA8B692376EAEE000AE3BA /* RxSwiftExt.framework */,
+				AADA8B5D2376EADE000AE3BA /* Differentiator.framework */,
+				AADA8B632376EAE6000AE3BA /* RxDataSources.framework */,
 				AA9D643123767F8D007130CA /* RxBlocking.framework */,
+				AADA8B592376EADB000AE3BA /* Action.framework */,
 				AA9D643523767F90007130CA /* RxCocoa.framework */,
 				AA9D643823767F92007130CA /* RxFlow.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AADA8B492376E336000AE3BA /* Coordinate */ = {
+			isa = PBXGroup;
+			children = (
+				AADA8B742376F234000AE3BA /* MainStepper.swift */,
+				AADA8B4A2376E362000AE3BA /* MainSteps.swift */,
+				AADA8B4C2376E407000AE3BA /* MainFlow.swift */,
+			);
+			path = Coordinate;
+			sourceTree = "<group>";
+		};
+		AADA8B4E2376E4ED000AE3BA /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				AADA8B4F2376E4F3000AE3BA /* AllMovies */,
+				AADA8B502376E4FC000AE3BA /* MovieDetail */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		AADA8B4F2376E4F3000AE3BA /* AllMovies */ = {
+			isa = PBXGroup;
+			children = (
+				AADA8B582376E638000AE3BA /* ViewModels */,
+				AADA8B572376E632000AE3BA /* Views */,
+			);
+			path = AllMovies;
+			sourceTree = "<group>";
+		};
+		AADA8B502376E4FC000AE3BA /* MovieDetail */ = {
+			isa = PBXGroup;
+			children = (
+				AADA8B6D2376ED74000AE3BA /* ViewModels */,
+				AADA8B6C2376ED6E000AE3BA /* Views */,
+			);
+			path = MovieDetail;
+			sourceTree = "<group>";
+		};
+		AADA8B572376E632000AE3BA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AADA8B532376E62E000AE3BA /* AllMoviesViewController.swift */,
+				AADA8B542376E62E000AE3BA /* AllMoviesViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AADA8B582376E638000AE3BA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AADA8B512376E51C000AE3BA /* AllMoviesViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AADA8B6C2376ED6E000AE3BA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AADA8B702376EDA1000AE3BA /* MovieDetailViewController.swift */,
+				AADA8B712376EDA1000AE3BA /* MovieDetailViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AADA8B6D2376ED74000AE3BA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AADA8B6E2376ED8A000AE3BA /* MovieDetailViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,7 +328,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AADA8B732376EDA1000AE3BA /* MovieDetailViewController.xib in Resources */,
 				AA9D641623767550007130CA /* LaunchScreen.storyboard in Resources */,
+				AADA8B562376E62E000AE3BA /* AllMoviesViewController.xib in Resources */,
 				AA9D641323767550007130CA /* Assets.xcassets in Resources */,
 				AA9D644223768249007130CA /* README.md in Resources */,
 				AA9D64112376754D007130CA /* Main.storyboard in Resources */,
@@ -243,6 +360,12 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxDataSources.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Action.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxOptional.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwiftExt.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Differentiator.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Reusable.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -252,6 +375,12 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxRelay.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxDataSources.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Action.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxOptional.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Differentiator.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwiftExt.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Reusable.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -265,8 +394,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA9D640E2376754D007130CA /* ViewController.swift in Sources */,
+				AADA8B4B2376E362000AE3BA /* MainSteps.swift in Sources */,
+				AADA8B552376E62E000AE3BA /* AllMoviesViewController.swift in Sources */,
+				AADA8B4D2376E407000AE3BA /* MainFlow.swift in Sources */,
+				AADA8B6F2376ED8A000AE3BA /* MovieDetailViewModel.swift in Sources */,
+				AADA8B752376F234000AE3BA /* MainStepper.swift in Sources */,
 				AA9D640A2376754D007130CA /* AppDelegate.swift in Sources */,
 				AA9D640C2376754D007130CA /* SceneDelegate.swift in Sources */,
+				AADA8B722376EDA1000AE3BA /* MovieDetailViewController.swift in Sources */,
+				AADA8B522376E51C000AE3BA /* AllMoviesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
