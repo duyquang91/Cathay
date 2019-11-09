@@ -28,7 +28,7 @@ class MainFlow: Flow {
             
             return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: viewModel))
         
-        case .showMovieDetail:
+        case .showMovieDetail(let id):
             let viewController = MovieDetailViewController()
             let viewModel = MovieDetailViewModel()
             navigationController.pushViewController(viewController, animated: true)

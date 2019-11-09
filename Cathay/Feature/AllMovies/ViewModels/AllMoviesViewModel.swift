@@ -8,13 +8,37 @@
 
 import Foundation
 import RxCocoa
+import RxSwift
 import RxFlow
+import Action
 
-class AllMoviesViewModel: Stepper {
+struct AllMoviesViewModel: ViewModelType, Stepper {
     
+    // ViewModelType conformances
+    struct Input {
+        let refreshTrigger: Signal<Void>
+        let loadMoreTrigger: Signal<Void>
+        let showDetailTrigger: Signal<MovieModel>
+    }
+    
+    struct Output {
+        let movies: Driver<MovieModel>
+        let errors: Signal<Error>
+        let isLoading: Driver<Bool>
+        let showDetailMovieId: Signal<String>
+    }
+    
+    func transform(input: Input) -> Output {
+        return Output(movies: Driver<MovieModel>,
+                      errors: Signal<Error>,
+                      isLoading: Driver<Bool>,
+                      showDetailMovieId: input.showDetailTrigger.map { $0.id })
+    }
+    
+    // Stepper conformances
     let steps = PublishRelay<Step>()
     
-    func showMovieDetail() {
-        steps.accept(MainSteps.showMovieDetail)
+    func showMovieDetail(withId id: String) {
+        steps.accept(MainSteps.showMovieDetail(withId: id))
     }
 }

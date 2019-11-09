@@ -1,5 +1,5 @@
 //
-//  AppSteps.swift
+//  MovieModel.swift
 //  Cathay
 //
 //  Created by Steve on 11/9/19.
@@ -7,9 +7,7 @@
 //
 
 import Foundation
-import RxFlow
 
-enum MainSteps: Step {
-    case showAllMovie
-    case showMovieDetail(withId: String)
+struct MovieModel {
+    let id: String
 }
