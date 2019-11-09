@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RxFlow  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="RxFlow  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">RxFlow Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">RxFlow Reference</a>
+        <img id="carat" src="img/carat.png" />
+        RxFlow  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/CompositeStepper.html">CompositeStepper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DefaultStepper.html">DefaultStepper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/FlowCoordinator.html">FlowCoordinator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Flows.html">Flows</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OneStepper.html">OneStepper</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/FlowContributor.html">FlowContributor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/FlowContributors.html">FlowContributors</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/RxFlowStep.html">RxFlowStep</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/ObservableType.html">ObservableType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Reactive.html">Reactive</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/Flow.html">Flow</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/Presentable.html">Presentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols.html#/s:6RxFlow4StepP">Step</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/Stepper.html">Stepper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols.html#/s:6RxFlow14SynchronizableP">Synchronizable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:6RxFlow11Coordinatora">Coordinator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:6RxFlow04NextB5Itemsa">NextFlowItems</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <table><thead>
+<tr>
+<th><img alt="RxFlow Logo" src="https://raw.githubusercontent.com/RxSwiftCommunity/RxFlow/develop/Resources/RxFlow_logo.png" width="250"/></th>
+<th><ul align="left"><li><a href="#about">About</a><li><a href="#navigation-concerns">Navigation concerns</a><li><a href="#rxflow-aims-to">RxFlow aims to</a><li><a href="#installation">Installation</a><li><a href="#the-key-principles">The key principles</a><li><a href="#how-to-use-rxflow">How to use RxFlow</a><li><a href="#tools-and-dependencies">Tools and dependencies</a></ul></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Travis CI</td>
+<td><a href="https://travis-ci.org/RxSwiftCommunity/RxFlow"><img src="https://travis-ci.org/RxSwiftCommunity/RxFlow.svg?branch=develop" alt="Build Status"></a></td>
+</tr>
+<tr>
+<td>Frameworks</td>
+<td><a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage Compatible"></a> <a href="http://cocoapods.org/pods/RxFlow"><img src="https://img.shields.io/cocoapods/v/RxFlow.svg?style=flat" alt="CocoaPods Compatible"></a></td>
+</tr>
+<tr>
+<td>Platform</td>
+<td><a href="http://cocoapods.org/pods/RxFlow"><img src="https://img.shields.io/cocoapods/p/RxFlow.svg?style=flat" alt="Platform"></a></td>
+</tr>
+<tr>
+<td>Licence</td>
+<td><a href="http://cocoapods.org/pods/RxFlow"><img src="https://img.shields.io/cocoapods/l/RxFlow.svg?style=flat" alt="License"></a></td>
+</tr>
+</tbody></table>
+
+<p><span style="float:none" /></p>
+<h1 id='about' class='heading'>About</h1>
+
+<p>RxFlow is a navigation framework for iOS applications based on a <strong>Reactive Flow Coordinator pattern</strong>.</p>
+
+<p>This README is a short story of the whole conception process that led me to this framework.</p>
+
+<p>You will find a very detail explanation of the whole project on my blog:</p>
+
+<ul>
+<li><a href="https://twittemb.github.io/swift/coordinator/rxswift/rxflow/reactive%20programming/2017/11/08/rxflow-part-1-in-theory/">RxFlow Part 1: In Theory</a></li>
+<li><a href="https://twittemb.github.io/swift/coordinator/reactive/rxflow/reactive%20programming/2017/12/09/rxflow-part-2-in-practice/">RxFlow Part 2: In Practice</a></li>
+<li><a href="https://twittemb.github.io/swift/coordinator/reactive/rxswift/reactive%20programming/rxflow/2017/12/22/rxflow-part-3-tips-and-tricks/">RxFlow Part 3: Tips and Tricks</a></li>
+</ul>
+
+<p>The Jazzy documentation can be seen here as well: <a href="http://community.rxswift.org/RxFlow/">Documentation</a></p>
+<h1 id='migrating-from-v1-x-x-to-v2-0-0' class='heading'>Migrating from v1.x.x to v2.0.0</h1>
+
+<p>⚠ RxFlow v2.0.0 brings some breaking changes.</p>
+
+<p>Here are the changes you should be aware of to use RxFlow 2.0.0 when coming from a previous version:</p>
+
+<ul>
+<li><code><a href="Typealiases.html#/s:6RxFlow11Coordinatora">Coordinator</a></code> has been renamed in <code><a href="Classes/FlowCoordinator.html">FlowCoordinator</a></code>.</li>
+<li><code>NextFlowItem</code> and <code><a href="Typealiases.html#/s:6RxFlow04NextB5Itemsa">NextFlowItems</a></code> have been renamed in <code><a href="Enums/FlowContributor.html">FlowContributor</a></code> and <code><a href="Enums/FlowContributors.html">FlowContributors</a></code>.</li>
+<li>The FlowContributors enum entry <code>.end (withStepForParentFlow: Step)</code> has been renamed in <code>.end (forwardToParentFlowWithStep: Step)</code>.</li>
+<li>The <code><a href="Enums/FlowContributor.html">FlowContributor</a></code> class has been converted to an enum with the following entries. It allows to unify the way we can contribute to a Flow:
+
+<ul>
+<li><code>.contribute(withNextPresentable: Presentable, withNextStepper: Stepper)</code>,</li>
+<li><code>.forwardToCurrentFlow(withStep: Step)</code>,</li>
+<li><code>.forwardToParentFlow(withStep: Step)</code>.</li>
+</ul></li>
+<li>In an effort to minimize the usage of <code>objc_get/setAssociatedObject</code>, each custom <code><a href="Protocols/Stepper.html">Stepper</a></code> must declare a stored property <code>steps</code> as a <code>PublishRelay&lt;Step&gt;</code>.</li>
+<li>To trigger an initial <code><a href="Protocols.html#/s:6RxFlow4StepP">Step</a></code> inside a <code><a href="Protocols/Stepper.html">Stepper</a></code>, an <code>initialStep</code> property has to be implemented. A default implementation is provided by <strong>RxFlow</strong> if it makes no sense to emit a first Step for your specific use case. This default implementation emits a <q>void step</q> that will be ignored by the <code><a href="Protocols/Flow.html">Flow</a></code>.</li>
+<li>The callback function <code>readyToEmitSteps()</code> has been added to a <code><a href="Protocols/Stepper.html">Stepper</a></code>. It is called once the Stepper can emit Steps (see the <code>AppStepper</code> in the Demo App for a valid use case).</li>
+<li>The reactive <code>step</code> property of a <code><a href="Protocols/Stepper.html">Stepper</a></code> has been renamed in <code>steps</code> to reflect the plurality of the sequence of steps it can emit.</li>
+<li><code><a href="Classes/FlowCoordinator.html">FlowCoordinator</a></code> has been totally rewritten to improve memory management.</li>
+<li><code>HasDisposeBag</code> has been removed from the project as it was not mandatory in the implementation and is not really related to RxFlow. A similar implementation can be found in <a href="https://github.com/RxSwiftCommunity/NSObject-Rx">NSObject-Rx</a>.</li>
+<li>The <code><a href="Enums/RxFlowStep.html">RxFlowStep</a></code> enum is now provided to offer some common steps that can be used in lots of applications. This enum will grow in size over time.</li>
+<li>Some of the old data structure names are still usable but have been explicitly deprecated.</li>
+</ul>
+
+<p>The Demo app has been updated to implement those changes.</p>
+<h1 id='navigation-concerns' class='heading'>Navigation concerns</h1>
+
+<p>Regarding navigation within an iOS application, two choices are available:</p>
+
+<ul>
+<li>Use the builtin mechanism provided by Apple and Xcode: storyboards and segues</li>
+<li>Implement a custom mechanism directly in the code</li>
+</ul>
+
+<p>The disadvantage of these two solutions:</p>
+
+<ul>
+<li>Builtin mechanism: navigation is relatively static and the storyboards are massive. The navigation code pollutes the UIViewControllers</li>
+<li>Custom mechanism: code can be difficult to set up and can be complex depending on the chosen design pattern (Router, Coordinator)</li>
+</ul>
+<h1 id='rxflow-aims-to' class='heading'>RxFlow aims to</h1>
+
+<ul>
+<li>Promote the cutting of storyboards into atomic units to enable collaboration and reusability of UIViewControllers</li>
+<li>Allow the presentation of a UIViewController in different ways according to the navigation context</li>
+<li>Ease the implementation of dependency injection</li>
+<li>Remove every navigation mechanism from UIViewControllers</li>
+<li>Promote reactive programming</li>
+<li>Express the navigation in a declarative way while addressing the majority of the navigation cases</li>
+<li>Facilitate the cutting of an application into logical blocks of navigation</li>
+</ul>
+<h1 id='installation' class='heading'>Installation</h1>
+<h2 id='carthage' class='heading'>Carthage</h2>
+
+<p>In your Cartfile:</p>
+<pre class="highlight ruby"><code><span class="n">github</span> <span class="s2">"RxSwiftCommunity/RxFlow"</span>
+</code></pre>
+<h2 id='cocoapods' class='heading'>CocoaPods</h2>
+
+<p>In your Podfile:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'RxFlow'</span>
+</code></pre>
+<h1 id='the-key-principles' class='heading'>The key principles</h1>
+
+<p>The <strong>Coordinator</strong> pattern is a great way to organize the navigation within your application. It allows to:</p>
+
+<ul>
+<li>Remove the navigation code from UIViewControllers.</li>
+<li>Reuse UIViewControllers in different navigation contexts.</li>
+<li>Ease the use of dependency injection.</li>
+</ul>
+
+<p>To learn more about it, I suggest you take a look at this article: (<a href="http://khanlou.com/2015/10/coordinators-redux/">Coordinator Redux</a>).</p>
+
+<p>Nevertheless, the Coordinator pattern can have some drawbacks:</p>
+
+<ul>
+<li>The coordination mechanism has to be written each time you bootstrap an application.</li>
+<li>Communicating with the Coordinators stack can lead to a lot of boilerplate code.</li>
+</ul>
+
+<p>RxFlow is a reactive implementation of the Coordinator pattern. It has all the great features of this architecture, but brings some improvements:</p>
+
+<ul>
+<li>It makes the navigation more declarative within <strong>Flows</strong>.</li>
+<li>It provides a built-in <strong>FlowCoordinator</strong> that handles the navigation between <strong>Flows</strong>.</li>
+<li>It uses reactive programming to trigger navigation actions towards the <strong>FlowCoordinators</strong>.</li>
+</ul>
+
+<p>There are 6 terms you have to be familiar with to understand <strong>RxFlow</strong>:</p>
+
+<ul>
+<li><strong>Flow</strong>: each <strong>Flow</strong> defines a navigation area in your application. This is the place where you declare the navigation actions (such as presenting a UIViewController or another <strong>Flow</strong>).</li>
+<li><strong>Step</strong>: a <strong>Step</strong> is a way to express a state that can lead to a navigation. Combinations of <strong>Flows</strong> and <strong>Steps</strong> describe all the possible navigation actions. A <strong>Step</strong> can even embed inner values (such as Ids, URLs, &hellip;) that will be propagated to screens declared in the <strong>Flows</strong></li>
+<li><strong>Stepper</strong>: a <strong>Stepper</strong> can be anything that can emit <strong>Steps</strong> inside <strong>Flows</strong>.</li>
+<li><strong>Presentable</strong>: it is an abstraction of something that can be presented (basically <strong>UIViewController</strong> and <strong>Flow</strong> are <strong>Presentable</strong>).</li>
+<li><strong>FlowContributor</strong>: it is a simple data structure that tells the <strong>FlowCoordinator</strong> what will be the next things that can emit new <strong>Steps</strong> in a <strong>Flow</strong>.</li>
+<li><strong>FlowCoordinator</strong>: once the developer has defined the suitable combinations of <strong>Flows</strong> and <strong>Steps</strong> representing the navigation possibilities, the job of the <strong>FlowCoordinator</strong> is to mix these combinations to handle all the navigation of your app. <strong>FlowCoordinators</strong> are provided by <strong>RxFlow</strong>, you don&rsquo;t have to implement them.</li>
+</ul>
+<h1 id='how-to-use-rxflow' class='heading'>How to use RxFlow</h1>
+<h2 id='code-samples' class='heading'>Code samples</h2>
+<h3 id='how-to-declare-strong-steps-strong' class='heading'>How to declare <strong>Steps</strong></h3>
+
+<p><strong>Steps</strong> are little pieces of states eventually expressing the intent to navigate, it is pretty convenient to declare them in a enum:</p>
+<pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">DemoStep</span><span class="p">:</span> <span class="kt">Step</span> <span class="p">{</span>
+    <span class="c1">// Login</span>
+    <span class="k">case</span> <span class="n">loginIsRequired</span>
+    <span class="k">case</span> <span class="n">userIsLoggedIn</span>
+
+    <span class="c1">// Onboarding</span>
+    <span class="k">case</span> <span class="n">onboardingIsRequired</span>
+    <span class="k">case</span> <span class="n">onboardingIsComplete</span>
+
+    <span class="c1">// Home</span>
+    <span class="k">case</span> <span class="n">dashboardIsRequired</span>
+
+    <span class="c1">// Movies</span>
+    <span class="k">case</span> <span class="n">moviesAreRequired</span>
+    <span class="k">case</span> <span class="nf">movieIsPicked</span> <span class="p">(</span><span class="nv">withId</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span>
+    <span class="k">case</span> <span class="nf">castIsPicked</span> <span class="p">(</span><span class="nv">withId</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span>
+
+    <span class="c1">// Settings</span>
+    <span class="k">case</span> <span class="n">settingsAreRequired</span>
+    <span class="k">case</span> <span class="n">settingsAreComplete</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>The idea is to keep the <strong>Steps</strong> <code>navigation independent</code> as much as possible. For instance, calling a <strong>Step</strong> <code>showMovieDetail(withId: Int)</code> might be a bad idea since it tighlty couples the fact of selecting a movie with the consequence of showing the movie detail screen. It is not up to the emitter of the <strong>Step</strong> to decide where to navigate, this decision belongs to the <strong>Flow</strong>. </p>
+<h3 id='how-to-declare-a-strong-flow-strong' class='heading'>How to declare a <strong>Flow</strong></h3>
+
+<p>The following <strong>Flow</strong> is used as a Navigation stack. All you have to do is:</p>
+
+<ul>
+<li>Declare a root <strong>Presentable</strong> on which your navigation will be based.</li>
+<li>Implement the <strong>navigate(to:)</strong> function to transform a <strong>Step</strong> into a navigation actions.</li>
+</ul>
+
+<p><strong>Flows</strong> can be used to implement dependency injection when instantiating the ViewControllers.</p>
+
+<p>The <strong>navigate(to:)</strong> function returns a <strong>FlowContributors</strong>. This is how the next navigation actions will be produced. </p>
+
+<p>For instance the value: <code>.one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: viewController.viewModel)</code> means:</p>
+
+<ul>
+<li><code>viewController</code> is a <strong>Presentable</strong> and its lifecycle will affect the way the associated <strong>Stepper</strong> will emit <strong>Steps</strong>. For instance, if a <strong>Stepper</strong> emits a <strong>Step</strong> while its associated <strong>Presentable</strong> is temporarely hidden, this <strong>Step</strong> won&rsquo;t be taken care of.</li>
+<li><code>viewController.viewModel</code> is a <strong>Stepper</strong> and will contribute to the navigation in that <strong>Flow</strong> by emitting <strong>Steps</strong>, according to its associated <strong>Presentable</strong> lifecycle.</li>
+</ul>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">WatchedFlow</span><span class="p">:</span> <span class="kt">Flow</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">root</span><span class="p">:</span> <span class="kt">Presentable</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">self</span><span class="o">.</span><span class="n">rootViewController</span>
+    <span class="p">}</span>
+
+    <span class="kd">private</span> <span class="k">let</span> <span class="nv">rootViewController</span> <span class="o">=</span> <span class="kt">UINavigationController</span><span class="p">()</span>
+    <span class="kd">private</span> <span class="k">let</span> <span class="nv">services</span><span class="p">:</span> <span class="kt">AppServices</span>
+
+    <span class="nf">init</span><span class="p">(</span><span class="n">withServices</span> <span class="nv">services</span><span class="p">:</span> <span class="kt">AppServices</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">services</span> <span class="o">=</span> <span class="n">services</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">navigate</span><span class="p">(</span><span class="n">to</span> <span class="nv">step</span><span class="p">:</span> <span class="kt">Step</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">FlowContributors</span> <span class="p">{</span>
+
+        <span class="k">guard</span> <span class="k">let</span> <span class="nv">step</span> <span class="o">=</span> <span class="n">step</span> <span class="k">as?</span> <span class="kt">DemoStep</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="o">.</span><span class="k">none</span> <span class="p">}</span>
+
+        <span class="k">switch</span> <span class="n">step</span> <span class="p">{</span>
+
+        <span class="k">case</span> <span class="o">.</span><span class="nv">moviesAreRequired</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nf">navigateToMovieListScreen</span><span class="p">()</span>
+        <span class="k">case</span> <span class="o">.</span><span class="nf">movieIsPicked</span><span class="p">(</span><span class="k">let</span> <span class="nv">movieId</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nf">navigateToMovieDetailScreen</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">movieId</span><span class="p">)</span>
+        <span class="k">case</span> <span class="o">.</span><span class="nf">castIsPicked</span><span class="p">(</span><span class="k">let</span> <span class="nv">castId</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nf">navigateToCastDetailScreen</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">castId</span><span class="p">)</span>
+        <span class="k">default</span><span class="p">:</span>
+            <span class="k">return</span> <span class="o">.</span><span class="k">none</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">private</span> <span class="kd">func</span> <span class="nf">navigateToMovieListScreen</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">FlowContributors</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">viewController</span> <span class="o">=</span> <span class="kt">WatchedViewController</span><span class="o">.</span><span class="nf">instantiate</span><span class="p">(</span><span class="nv">withViewModel</span><span class="p">:</span> <span class="kt">WatchedViewModel</span><span class="p">(),</span>
+                                                               <span class="nv">andServices</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">services</span><span class="p">)</span>
+        <span class="n">viewController</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s">"Watched"</span>
+
+        <span class="k">self</span><span class="o">.</span><span class="n">rootViewController</span><span class="o">.</span><span class="nf">pushViewController</span><span class="p">(</span><span class="n">viewController</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+        <span class="k">return</span> <span class="o">.</span><span class="nf">one</span><span class="p">(</span><span class="nv">flowContributor</span><span class="p">:</span> <span class="o">.</span><span class="nf">contribute</span><span class="p">(</span><span class="nv">withNextPresentable</span><span class="p">:</span> <span class="n">viewController</span><span class="p">,</span> <span class="nv">withNextStepper</span><span class="p">:</span> <span class="n">viewController</span><span class="o">.</span><span class="n">viewModel</span><span class="p">))</span>
+    <span class="p">}</span>
+
+    <span class="kd">private</span> <span class="kd">func</span> <span class="nf">navigateToMovieDetailScreen</span> <span class="p">(</span><span class="n">with</span> <span class="nv">movieId</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">FlowContributors</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">viewController</span> <span class="o">=</span> <span class="kt">MovieDetailViewController</span><span class="o">.</span><span class="nf">instantiate</span><span class="p">(</span><span class="nv">withViewModel</span><span class="p">:</span> <span class="kt">MovieDetailViewModel</span><span class="p">(</span><span class="nv">withMovieId</span><span class="p">:</span> <span class="n">movieId</span><span class="p">),</span>
+                                                                   <span class="nv">andServices</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">services</span><span class="p">)</span>
+        <span class="n">viewController</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">viewController</span><span class="o">.</span><span class="n">viewModel</span><span class="o">.</span><span class="n">title</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">rootViewController</span><span class="o">.</span><span class="nf">pushViewController</span><span class="p">(</span><span class="n">viewController</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+        <span class="k">return</span> <span class="o">.</span><span class="nf">one</span><span class="p">(</span><span class="nv">flowContributor</span><span class="p">:</span> <span class="o">.</span><span class="nf">contribute</span><span class="p">(</span><span class="nv">withNextPresentable</span><span class="p">:</span> <span class="n">viewController</span><span class="p">,</span> <span class="nv">withNextStepper</span><span class="p">:</span> <span class="n">viewController</span><span class="o">.</span><span class="n">viewModel</span><span class="p">))</span>
+    <span class="p">}</span>
+
+    <span class="kd">private</span> <span class="kd">func</span> <span class="nf">navigateToCastDetailScreen</span> <span class="p">(</span><span class="n">with</span> <span class="nv">castId</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">FlowContributors</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">viewController</span> <span class="o">=</span> <span class="kt">CastDetailViewController</span><span class="o">.</span><span class="nf">instantiate</span><span class="p">(</span><span class="nv">withViewModel</span><span class="p">:</span> <span class="kt">CastDetailViewModel</span><span class="p">(</span><span class="nv">withCastId</span><span class="p">:</span> <span class="n">castId</span><span class="p">),</span>
+                                                                  <span class="nv">andServices</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">services</span><span class="p">)</span>
+        <span class="n">viewController</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">viewController</span><span class="o">.</span><span class="n">viewModel</span><span class="o">.</span><span class="n">name</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">rootViewController</span><span class="o">.</span><span class="nf">pushViewController</span><span class="p">(</span><span class="n">viewController</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+        <span class="k">return</span> <span class="o">.</span><span class="k">none</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='how-to-declare-a-strong-stepper-strong' class='heading'>How to declare a <strong>Stepper</strong></h3>
+
+<p>In theory a <strong>Stepper</strong>, as it is a protocol, can be anything (a UIViewController for instance) but a good practice is to isolate that behavior in a ViewModel or something similar.</p>
+
+<p>RxFlow comes with a predefined <strong>OneStepper</strong> class. For instance, it can be used when creating a new Flow to express the first <strong>Step</strong> that will drive the navigation.</p>
+
+<p>The following <strong>Stepper</strong>  will emit a <strong>DemoStep.moviePicked(withMovieId:)</strong> each time the function <strong>pick(movieId:)</strong> is called. The WatchedFlow will then call the function <strong>navigateToMovieDetailScreen (with movieId: Int)</strong>.</p>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">WatchedViewModel</span><span class="p">:</span> <span class="kt">Stepper</span> <span class="p">{</span>
+
+    <span class="k">let</span> <span class="nv">movies</span><span class="p">:</span> <span class="p">[</span><span class="kt">MovieViewModel</span><span class="p">]</span>
+    <span class="k">let</span> <span class="nv">steps</span> <span class="o">=</span> <span class="kt">PublishRelay</span><span class="o">&lt;</span><span class="kt">Step</span><span class="o">&gt;</span><span class="p">()</span>
+
+    <span class="nf">init</span><span class="p">(</span><span class="n">with</span> <span class="nv">service</span><span class="p">:</span> <span class="kt">MoviesService</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// we can do some data refactoring in order to display things exactly the way we want (this is the aim of a ViewModel)</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">movies</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="nf">watchedMovies</span><span class="p">()</span><span class="o">.</span><span class="nf">map</span><span class="p">({</span> <span class="p">(</span><span class="n">movie</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MovieViewModel</span> <span class="k">in</span>
+            <span class="k">return</span> <span class="kt">MovieViewModel</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="n">movie</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="nv">title</span><span class="p">:</span> <span class="n">movie</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="nv">image</span><span class="p">:</span> <span class="n">movie</span><span class="o">.</span><span class="n">image</span><span class="p">)</span>
+        <span class="p">})</span>
+    <span class="p">}</span>
+
+    <span class="c1">// when a movie is picked, a new Step is emitted.</span>
+    <span class="c1">// That will trigger a navigation action within the WatchedFlow</span>
+    <span class="kd">public</span> <span class="kd">func</span> <span class="nf">pick</span> <span class="p">(</span><span class="nv">movieId</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">steps</span><span class="o">.</span><span class="nf">accept</span><span class="p">(</span><span class="kt">DemoStep</span><span class="o">.</span><span class="nf">movieIsPicked</span><span class="p">(</span><span class="nv">withId</span><span class="p">:</span> <span class="n">movieId</span><span class="p">))</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre>
+<h3 id='is-it-possible-to-coordinate-multiple-flows' class='heading'>Is it possible to coordinate multiple Flows ?</h3>
+
+<p>Of course, it is the aim of a Coordinator. Inside a Flow we can present UIViewControllers and also new Flows. The function <strong>Flows.whenReady()</strong> allows to be triggered when the new <strong>Flow</strong> is ready to be displayed and gives us back its root <strong>Presentable</strong>.</p>
+
+<p>For instance, from the WishlistFlow, we launch the SettingsFlow in a popup.</p>
+<pre class="highlight swift"><code>    <span class="kd">private</span> <span class="kd">func</span> <span class="nf">navigateToSettings</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">FlowContributors</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">settingsStepper</span> <span class="o">=</span> <span class="kt">SettingsStepper</span><span class="p">()</span>
+        <span class="k">let</span> <span class="nv">settingsFlow</span> <span class="o">=</span> <span class="kt">SettingsFlow</span><span class="p">(</span><span class="nv">withServices</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">services</span><span class="p">,</span> <span class="nv">andStepper</span><span class="p">:</span> <span class="n">settingsStepper</span><span class="p">)</span>
+
+        <span class="kt">Flows</span><span class="o">.</span><span class="nf">whenReady</span><span class="p">(</span><span class="nv">flow1</span><span class="p">:</span> <span class="n">settingsFlow</span><span class="p">)</span> <span class="p">{</span> <span class="p">[</span><span class="k">unowned</span> <span class="k">self</span><span class="p">]</span> <span class="p">(</span><span class="nv">root</span><span class="p">:</span> <span class="kt">UISplitViewController</span><span class="p">)</span> <span class="k">in</span>
+            <span class="k">self</span><span class="o">.</span><span class="n">rootViewController</span><span class="o">.</span><span class="nf">present</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="o">.</span><span class="nf">one</span><span class="p">(</span><span class="nv">flowContributor</span><span class="p">:</span> <span class="o">.</span><span class="nf">contribute</span><span class="p">(</span><span class="nv">withNextPresentable</span><span class="p">:</span> <span class="n">settingsFlow</span><span class="p">,</span> <span class="nv">withNextStepper</span><span class="p">:</span> <span class="n">settingsStepper</span><span class="p">))</span>
+    <span class="p">}</span>
+</code></pre>
+
+<p>For more complex cases, see the <strong>DashboardFlow.swift</strong> and the <strong>SettingsFlow.swift</strong> files in which we handle a UITabBarController and a UISplitViewController.</p>
+<h3 id='how-to-bootstrap-the-rxflow-process' class='heading'>How to bootstrap the RxFlow process</h3>
+
+<p>The coordination process is pretty straightfoward and happens in the AppDelegate.</p>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">AppDelegate</span><span class="p">:</span> <span class="kt">UIResponder</span><span class="p">,</span> <span class="kt">UIApplicationDelegate</span> <span class="p">{</span>
+
+    <span class="k">let</span> <span class="nv">disposeBag</span> <span class="o">=</span> <span class="kt">DisposeBag</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">window</span><span class="p">:</span> <span class="kt">UIWindow</span><span class="p">?</span>
+    <span class="k">var</span> <span class="nv">coordinator</span> <span class="o">=</span> <span class="kt">FlowCoordinator</span><span class="p">()</span>
+    <span class="k">let</span> <span class="nv">appServices</span> <span class="o">=</span> <span class="kt">AppServices</span><span class="p">()</span>
+
+    <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span>
+                     <span class="n">didFinishLaunchingWithOptions</span> <span class="nv">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIApplicationLaunchOptionsKey</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
+
+        <span class="k">guard</span> <span class="k">let</span> <span class="nv">window</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="n">window</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="kc">false</span> <span class="p">}</span>
+
+        <span class="c1">// listening for the coordination mechanism is not mandatory, but can be useful</span>
+        <span class="n">coordinator</span><span class="o">.</span><span class="n">rx</span><span class="o">.</span><span class="n">didNavigate</span><span class="o">.</span><span class="nf">subscribe</span><span class="p">(</span><span class="nv">onNext</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">flow</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span> <span class="k">in</span>
+            <span class="nf">print</span> <span class="p">(</span><span class="s">"did navigate to flow=</span><span class="se">\(</span><span class="n">flow</span><span class="se">)</span><span class="s"> and step=</span><span class="se">\(</span><span class="n">step</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+        <span class="p">})</span><span class="o">.</span><span class="nf">disposed</span><span class="p">(</span><span class="nv">by</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">disposeBag</span><span class="p">)</span>
+
+        <span class="k">let</span> <span class="nv">appFlow</span> <span class="o">=</span> <span class="kt">AppFlow</span><span class="p">(</span><span class="nv">withWindow</span><span class="p">:</span> <span class="n">window</span><span class="p">,</span> <span class="nv">andServices</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">appServices</span><span class="p">)</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">coordinator</span><span class="o">.</span><span class="nf">coordinate</span><span class="p">(</span><span class="nv">flow</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">appFlow</span><span class="p">,</span> <span class="nv">with</span><span class="p">:</span> <span class="kt">AppStepper</span><span class="p">(</span><span class="nv">withServices</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">appServices</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="kc">true</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>As a bonus, <strong>FlowCoordinator</strong> offers a Rx extension that allows you to track the navigation actions (<strong>FlowCoordinator.rx.willNavigate</strong> and <strong>FlowCoordinator.rx.didNavigate</strong>).</p>
+<h2 id='demo-application' class='heading'>Demo Application</h2>
+
+<p>A demo application is provided to illustrate the core mechanisms. Pretty much every kind of navigation is addressed. The app consists of:</p>
+
+<ul>
+<li>An AppFlow that represents the main navigation. This Flow will handle the OnboardingFlow and the DashboardFlow depending on the <q>onboarding state</q> of the user.</li>
+<li>An OnBoardingFlow that represents a 2 steps onboarding wizard in a UINavigationController. It will only be displayed the first time the app is used.</li>
+<li>A DashboardFlow that handles the Tabbar for the WishlistFlow and the WatchedFlow.</li>
+<li>A WishlistFlow that represents a navigation stack of movies that you want to watch.</li>
+<li>A WatchedFlow that represents a navigation stack of movies that you&rsquo;ve already seen.</li>
+<li>A SettingsFlow that represents the user&rsquo;s preferences in a master/detail presentation.</li>
+</ul>
+
+<p><br/>
+<kbd>
+<img style="border:2px solid black" alt="Demo Application" src="https://raw.githubusercontent.com/RxSwiftCommunity/RxFlow/develop/Resources/RxFlow.gif"/>
+</kbd></p>
+<h1 id='tools-and-dependencies' class='heading'>Tools and dependencies</h1>
+
+<p>RxFlow relies on:</p>
+
+<ul>
+<li>SwiftLint for static code analysis (<a href="https://github.com/realm/SwiftLint">Github SwiftLint</a>)</li>
+<li>RxSwift to expose Steps as Observables the Coordinator can react to (<a href="https://github.com/ReactiveX/RxSwift">Github RxSwift</a>)</li>
+<li>Reusable in the Demo App to ease the storyboard cutting into atomic ViewControllers (<a href="https://github.com/AliSoftware/Reusable">Github Reusable</a>)</li>
+</ul>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://github.com/RxSwiftCommunity/RxFlow" target="_blank" rel="external">Thibault Wittemberg and RxSwiftCommunity</a>. All rights reserved. (Last updated: 2019-04-30)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
