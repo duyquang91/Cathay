@@ -7,6 +7,19 @@ $ sh ./setup.sh
 ```
 Now, take a cup of coffee!
 
+## Architectures
+We separate main Application to 2 main components: Application & Domain
+![](./srcs/app_architecture.png)
+
+### Application layer:
+Where we're applying the **MVVM** architecture to isolate the main business logics from other resources.
+
+### Domain layer:
+Where we're implementing the dependency for resource requests such as: repository, caching, etc. In this demonstration project, we only implement the Repository here.
+
+### Navigation:
+Apple has introduced **StoryBoard** & **Segue** to navigate between screens. It's suitable for small App by **MVC** architecture. It's a strong recommendation to apply the **Coordinator** idea to **MVVM** architecture by reactive programming. We're using the [**RxFlow**](https://github.com/RxSwiftCommunity/RxFlow) to manage the navigation.
+
 ## License
 
 MIT License
