@@ -12,33 +12,43 @@ import RxSwift
 import RxFlow
 import Action
 
-struct AllMoviesViewModel: ViewModelType, Stepper {
+class AllMoviesViewModel: ViewModelType, Stepper {
+    
+    private let movieRepository: MovieRepositoryType
+    private let disposeBag = DisposeBag()
+    private lazy var loadAllMoviesAction = Action<Int, [MovieModel]>(workFactory: { page -> Single<[MovieModel]> in
+        return self.movieRepository.loadAllMovies(page: page)
+    })
+    
+    init(movieRepository: MovieRepositoryType) {
+        self.movieRepository = movieRepository
+    }
     
     // ViewModelType conformances
     struct Input {
-        let refreshTrigger: Signal<Void>
-        let loadMoreTrigger: Signal<Void>
-        let showDetailTrigger: Signal<MovieModel>
+        let refreshTrigger: Observable<Void>
+        let loadMoreTrigger: Observable<Void>
+        let showMovieDetailTrigger: Observable<MovieModel>
     }
     
     struct Output {
-        let movies: Driver<MovieModel>
-        let errors: Signal<Error>
-        let isLoading: Driver<Bool>
-        let showDetailMovieId: Signal<String>
+        let movies: Observable<[MovieModel]>
+        let errors: Observable<Error>
+        let isLoading: Observable<Bool>
     }
     
     func transform(input: Input) -> Output {
-        return Output(movies: Driver<MovieModel>,
-                      errors: Signal<Error>,
-                      isLoading: Driver<Bool>,
-                      showDetailMovieId: input.showDetailTrigger.map { $0.id })
+        input.showMovieDetailTrigger
+            .map { $0.id }
+            .map { MainSteps.showMovieDetail(withId: $0) }
+            .bind(to: steps)
+            .disposed(by: disposeBag)
+        
+        return Output(movies: loadAllMoviesAction.elements,
+                      errors: loadAllMoviesAction.underlyingError,
+                      isLoading: loadAllMoviesAction.executing)
     }
     
     // Stepper conformances
     let steps = PublishRelay<Step>()
-    
-    func showMovieDetail(withId id: String) {
-        steps.accept(MainSteps.showMovieDetail(withId: id))
-    }
 }

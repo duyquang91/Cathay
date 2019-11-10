@@ -11,6 +11,17 @@ import RxCocoa
 import RxSwift
 
 protocol MovieRepositoryType {
-    func loadAllMovie(page: Int) -> Single<MovieModel>
+    func loadAllMovies(page: Int) -> Single<[MovieModel]>
     func loadMovieDetail(id: String) -> Single<MovieModel>
+}
+
+struct MockMovieRepository: MovieRepositoryType {
+    
+    func loadAllMovies(page: Int) -> Single<[MovieModel]> {
+        return Single.just([MovieModel(id: "1234")])
+    }
+    
+    func loadMovieDetail(id: String) -> Single<MovieModel> {
+        return Single.just(MovieModel(id: "1234"))
+    }
 }

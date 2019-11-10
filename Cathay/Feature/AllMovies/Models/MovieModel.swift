@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct MovieModel {
+struct MovieModel: Codable {
     let id: String
 }
