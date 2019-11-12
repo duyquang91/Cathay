@@ -16,7 +16,7 @@ class AllMoviesViewModel: ViewModelType, Stepper {
     
     private let movieRepository: MovieRepositoryType
     private let disposeBag = DisposeBag()
-    private lazy var loadAllMoviesAction = Action<Int, [MovieModel]>(workFactory: { page -> Single<[MovieModel]> in
+    private lazy var loadAllMoviesAction = Action<Int, AllMoviesResponseModel>(workFactory: { page -> Single<AllMoviesResponseModel> in
         return self.movieRepository.loadAllMovies(page: page)
     })
     
@@ -39,12 +39,12 @@ class AllMoviesViewModel: ViewModelType, Stepper {
     
     func transform(input: Input) -> Output {
         input.showMovieDetailTrigger
-            .map { $0.id }
+            .map { "\($0.id)" }
             .map { MainSteps.showMovieDetail(withId: $0) }
             .bind(to: steps)
             .disposed(by: disposeBag)
         
-        return Output(movies: loadAllMoviesAction.elements,
+        return Output(movies: loadAllMoviesAction.elements.map { $0.results },
                       errors: loadAllMoviesAction.underlyingError,
                       isLoading: loadAllMoviesAction.executing)
     }

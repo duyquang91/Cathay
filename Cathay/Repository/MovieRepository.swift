@@ -11,17 +11,27 @@ import RxCocoa
 import RxSwift
 
 protocol MovieRepositoryType {
-    func loadAllMovies(page: Int) -> Single<[MovieModel]>
+    func loadAllMovies(page: Int) -> Single<AllMoviesResponseModel>
     func loadMovieDetail(id: String) -> Single<MovieModel>
 }
 
 struct MockMovieRepository: MovieRepositoryType {
     
-    func loadAllMovies(page: Int) -> Single<[MovieModel]> {
-        return Single.just([MovieModel(id: "1234")])
+    func loadAllMovies(page: Int) -> Single<AllMoviesResponseModel> {
+        do {
+            let object: AllMoviesResponseModel = try Bundle.main.getObject(fromJsonFile: "AllMoviews")
+            return Single.just(object)
+        } catch (let error) {
+            return Single.error(error)
+        }
     }
     
     func loadMovieDetail(id: String) -> Single<MovieModel> {
-        return Single.just(MovieModel(id: "1234"))
+        do {
+            let object: MovieModel = try Bundle.main.getObject(fromJsonFile: "MovieDetail")
+            return Single.just(object)
+        } catch (let error) {
+            return Single.error(error)
+        }
     }
 }
