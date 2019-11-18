@@ -20,6 +20,10 @@ Where we're implementing the dependency for resource requests such as: repositor
 ### Navigation:
 Apple has introduced **StoryBoard** & **Segue** to navigate between screens. It's suitable for small App by **MVC** architecture. It's a strong recommendation to apply the **Coordinator** idea to **MVVM** architecture by reactive programming. We're using the [**RxFlow**](https://github.com/RxSwiftCommunity/RxFlow) to manage the navigation.
 
+### SwiftUI:
+We're applying the **SwiftUI** to implement the UI for all screens.
+![](./srcs/screen_shoot1.png)
+
 ## License
 
 MIT License
