@@ -12,7 +12,11 @@ import RxFlow
 
 class MainFlow: Flow {
     
-    private let navigationController = UINavigationController()
+    private lazy var navigationController: UINavigationController = {
+        let navigation = UINavigationController()
+        navigation.navigationBar.prefersLargeTitles = true
+        return navigation
+    }()
     
     //Dependencies
     private let movieService = MockMovieRepository()
@@ -29,6 +33,7 @@ class MainFlow: Flow {
         case .showAllMovie:
             let viewController = AllMoviesViewController()
             let viewModel = AllMoviesViewModel(movieRepository: movieService)
+            viewController.viewModel = viewModel
             navigationController.pushViewController(viewController, animated: true)
             
             return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: viewModel))

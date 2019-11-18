@@ -19,7 +19,7 @@ struct MockMovieRepository: MovieRepositoryType {
     
     func loadAllMovies(page: Int) -> Single<AllMoviesResponseModel> {
         do {
-            let object: AllMoviesResponseModel = try Bundle.main.getObject(fromJsonFile: "AllMoviews")
+            let object: AllMoviesResponseModel = try Bundle.main.getObject(fromJsonFile: "AllMovies")
             return Single.just(object)
         } catch (let error) {
             return Single.error(error)

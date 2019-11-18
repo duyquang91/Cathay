@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct MovieModel: Decodable {
+public struct MovieModel: Decodable {
     let id: Int
     let title: String
     let posterImageURL: URL?
@@ -18,9 +18,15 @@ struct MovieModel: Decodable {
     let genres: [GenreModel]?
     
     enum CodingKeys: String, CodingKey {
-        case id, title, popularity, genres, overView
+        case id, title, popularity, genres
         case posterImageURL = "poster_path"
         case backDropImageURL = "backdrop_path"
+        case overView = "overview"
+    }
+    
+    static var mockData: [MovieModel] {
+        let respone = try! Bundle.main.getObject(fromJsonFile: "AllMovies") as AllMoviesResponseModel
+        return respone.results
     }
 }
 

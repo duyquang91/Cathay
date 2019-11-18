@@ -9,6 +9,7 @@
 import Foundation
 import RxCocoa
 import RxSwift
+import RxOptional
 import RxFlow
 import Action
 
@@ -43,6 +44,7 @@ class AllMoviesViewModel: ViewModelType, Stepper {
             .map { MainSteps.showMovieDetail(withId: $0) }
             .bind(to: steps)
             .disposed(by: disposeBag)
+        input.refreshTrigger.map { 0 }.bind(to: loadAllMoviesAction.inputs).disposed(by: disposeBag)
         
         return Output(movies: loadAllMoviesAction.elements.map { $0.results },
                       errors: loadAllMoviesAction.underlyingError,

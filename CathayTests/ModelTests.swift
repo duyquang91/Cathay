@@ -12,7 +12,7 @@ import XCTest
 class ModelTests: XCTestCase {
     
     func testAllMovieModel() {
-        XCTAssertNoThrow(try Bundle.main.getObject(fromJsonFile: "AllMoviews") as AllMoviesResponseModel)
+        XCTAssertNoThrow(try Bundle.main.getObject(fromJsonFile: "AllMovies") as AllMoviesResponseModel)
     }
     
     func testMovieDetailModel() {
