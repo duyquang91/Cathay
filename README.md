@@ -3,8 +3,9 @@
 Cathay is an iOS assignment while applying to **ShopBack** at Singapore. We're applying some keys:
 1. MVVM architecture.
 2. Reactive programming by RxSwift & RxCocoa.
-3. Implementing UI by SwiftUI.
-4. Carthage dependency manager.
+3. Applying Coordinator pattern by RxFlow for App's navigations.
+4. Implementing UI by SwiftUI.
+5. Carthage dependency manager.
 
 Feel free to contribute to make this open-source project become better for everyone who love reactive programming & MVVM architecture.
 
