@@ -9,13 +9,27 @@ Cathay is an iOS assignment while applying to **ShopBack** at Singapore. We're a
 
 Feel free to contribute to make this open-source project become better for everyone who love reactive programming & MVVM architecture.
 
+## Checklists
+- [x] Building the base project by MVVM architecture.
+- [x] Adding the Carthage dependency manager & all needed dependencies.
+- [x] Implementing all needed ViewModels.
+- [x] Writing Unit Tests for ViewModels.
+- [x] Implementing repository.
+- [x] Adding the Mock datas & mock services.
+- [x] Implementing the Coordinator by RxFlow.
+- [ ] Implementing Views by SwiftUI.
+- [ ] Implementing repository by real API services from TheMovieDB.
+- [ ] Supporting an entry point from deep link by RxFlow.
+- [ ] Supporting multi schemes for mock & real services.
+
+
 ## Installation
 We're using the [**Carthage**](https://github.com/Carthage/Carthage) dependency manager instead of **Cocoapods** to speed up the build time. </br>
 We've written a script to let you get started easier. Please go to the root folder of project then run this script at terminal:
 ```
 $ sh ./setup.sh
 ```
-Now, take a cup of coffee!
+Now, take a cup of coffee! Sometime the terminal may ask you something to finish the process, feel free to take a look.
 
 ## Architectures
 We separate main Application to 2 main components: Application & Domain
