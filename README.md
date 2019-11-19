@@ -1,5 +1,13 @@
 # Cathay
 
+![](https://img.shields.io/badge/platform-iOS-red)
+![](https://img.shields.io/badge/swift-5.0.1-red)
+![](https://img.shields.io/badge/xcode-11.2.1-blue)
+![](https://img.shields.io/github/last-commit/duyquang91/cathay)
+![](https://img.shields.io/github/issues-raw/duyquang91/cathay)
+![](https://img.shields.io/github/stars/duyquang91/cathay)
+![](https://img.shields.io/github/forks/duyquang91/cathay)
+
 ## Hello world!
 Cathay is an iOS assignment while applying to **ShopBack** at Singapore.
 ![](./srcs/cathay.png)
