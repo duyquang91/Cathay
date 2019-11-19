@@ -7,20 +7,47 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
+import RxOptional
+import UIKit
 
-public struct MovieModel: Decodable {
-    let id: Int
+public struct MovieModel: Identifiable, Decodable {
+    
+    private let posterImageURLString: String
+    private let backDropImageURLString: String
+    var posterImageURL: URL? {
+        return URL(string: Constants.urlImageString + posterImageURLString)
+    }
+    var backDropImageURL: URL? {
+        return URL(string: Constants.urlImageString + backDropImageURLString)
+    }
+    var posterImage: Single<UIImage> {
+        if let posterImageURL = posterImageURL {
+            return ImageAPIClient.shared.requestImageData(fromUrl: posterImageURL).map { UIImage(data: $0) }.asObservable().filterNil().asSingle()
+        } else {
+            return Single.error(APIErrors.failure)
+        }
+    }
+    var backDropImage: Single<UIImage> {
+        if let backDropImageURL = backDropImageURL {
+            return ImageAPIClient.shared.requestImageData(fromUrl: backDropImageURL).map { UIImage(data: $0) }.asObservable().filterNil().asSingle()
+        } else {
+            return Single.error(APIErrors.failure)
+        }
+    }
+        
+    public let id: Int
     let title: String
-    let posterImageURL: URL?
-    let backDropImageURL: URL?
     let popularity: Double
     let overView: String?
     let genres: [GenreModel]?
+
     
     enum CodingKeys: String, CodingKey {
         case id, title, popularity, genres
-        case posterImageURL = "poster_path"
-        case backDropImageURL = "backdrop_path"
+        case posterImageURLString = "poster_path"
+        case backDropImageURLString = "backdrop_path"
         case overView = "overview"
     }
     

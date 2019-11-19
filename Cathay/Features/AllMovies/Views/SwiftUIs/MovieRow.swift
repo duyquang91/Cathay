@@ -7,19 +7,20 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct MovieRow: View {
     
-    var movie: MovieModel!
+    var movie: MovieModel
     
-    init(movie: MovieModel) {
-        self.movie = movie
-    }
     var body: some View {
-        VStack(alignment: .leading, spacing: 4, content: {
-            Text(movie.title).font(.body)
-            Text(movie.overView ?? "").font(.caption).lineLimit(3).foregroundColor(Color.gray)
-        })
+        HStack {
+            WebImage(url: movie.posterImageURL).resizable().animation(.easeInOut(duration: 0.35)).transition(.fade).scaledToFit().frame(maxHeight: 150)
+            VStack(alignment: .leading, spacing: 4, content: {
+                Text(movie.title).font(.body)
+                Text(movie.overView ?? "").font(.caption).lineLimit(7).foregroundColor(Color.gray)
+            }).frame(maxHeight: 150, alignment: .top)
+        }
     }
 }
 

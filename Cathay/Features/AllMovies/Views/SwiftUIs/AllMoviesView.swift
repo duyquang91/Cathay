@@ -7,8 +7,6 @@
 //
 
 import SwiftUI
-import RxSwift
-import RxCocoa
 
 struct AllMoviesView: View {
     
@@ -19,7 +17,7 @@ struct AllMoviesView: View {
     }
     
     var body: some View {
-        List(Range(NSRange(location: 0, length: movies.count))!) { MovieRow(movie: self.movies[$0]) }
+        List(movies) { MovieRow(movie: $0) }
     }
 }
 
