@@ -42,6 +42,10 @@ class AllMoviesViewController: UIViewController, NibOwnerLoadable {
                 viewController.rootView.movies = movies
             })
             .disposed(by: disposeBag)
+        
+        viewController.rootView.detailMovie
+            .bind(to: showMovieDetailTrigger)
+            .disposed(by: disposeBag)
     }
     
     override func viewDidAppear(_ animated: Bool) {

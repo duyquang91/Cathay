@@ -41,6 +41,7 @@ class MainFlow: Flow {
         case .showMovieDetail(let id):
             let viewController = MovieDetailViewController()
             let viewModel = MovieDetailViewModel(movieId: id, movieRepository: movieService)
+            viewController.viewModel = viewModel
             navigationController.pushViewController(viewController, animated: true)
             
             return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: viewModel))

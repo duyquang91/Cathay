@@ -7,17 +7,22 @@
 //
 
 import SwiftUI
+import RxSwift
+import RxCocoa
 
 struct AllMoviesView: View {
     
     var movies: [MovieModel]!
+    var detailMovie = PublishRelay<MovieModel>()
     
     init(movies: [MovieModel]) {
         self.movies = movies
     }
     
     var body: some View {
-        List(movies) { MovieRow(movie: $0) }
+        List(movies) { movie in
+            return MovieRow(movie: movie).onTapGesture { self.detailMovie.accept(movie) }
+        }
     }
 }
 

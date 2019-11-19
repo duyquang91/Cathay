@@ -12,8 +12,8 @@ import RxCocoa
 import RxOptional
 import UIKit
 
-public struct MovieModel: Identifiable, Decodable {
-    
+public struct MovieModel: Identifiable, Decodable, Equatable {
+
     private let posterImageURLString: String
     private let backDropImageURLString: String
     var posterImageURL: URL? {
@@ -49,6 +49,10 @@ public struct MovieModel: Identifiable, Decodable {
         case posterImageURLString = "poster_path"
         case backDropImageURLString = "backdrop_path"
         case overView = "overview"
+    }
+    
+    public static func == (lhs: MovieModel, rhs: MovieModel) -> Bool {
+        return lhs.id == rhs.id
     }
     
     static var mockData: [MovieModel] {

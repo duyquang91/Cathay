@@ -17,19 +17,25 @@ class MovieDetailViewModel: ViewModelType, Stepper {
     private lazy var loadMovieDetailAction = Action<String, MovieModel> { id -> Single<MovieModel> in
         return self.movieRepository.loadMovieDetail(id: id)
     }
+    private let disposeBag = DisposeBag()
     
     // ViewModelType conformances
     struct Input {
-        
+        let refreshTrigger: Observable<Void>
     }
     
     struct Output {
-        var movieModel: Observable<MovieModel>
-        var isLoading: Observable<Bool>
-        var errors: Observable<Error>
+        let movieModel: Observable<MovieModel>
+        let isLoading: Observable<Bool>
+        let errors: Observable<Error>
     }
     
     func transform(input: MovieDetailViewModel.Input) -> MovieDetailViewModel.Output {
+        input.refreshTrigger
+            .mapTo(movieId)
+            .bind(to: loadMovieDetailAction.inputs)
+            .disposed(by: disposeBag)
+        
         return Output(movieModel: loadMovieDetailAction.elements,
                       isLoading: loadMovieDetailAction.executing,
                       errors: loadMovieDetailAction.underlyingError)

@@ -1,11 +1,15 @@
 # Cathay
+
 ## Hello world!
-Cathay is an iOS assignment while applying to **ShopBack** at Singapore. We're applying some keys:
+Cathay is an iOS assignment while applying to **ShopBack** at Singapore.
+![](./srcs/cathay.png)
+We're applying some keys:
 1. MVVM architecture.
 2. Reactive programming by RxSwift & RxCocoa.
 3. Applying Coordinator pattern by RxFlow for App's navigations.
 4. Implementing UI by SwiftUI.
 5. Carthage dependency manager.
+
 
 Feel free to contribute to make this open-source project become better for everyone who love reactive programming & MVVM architecture.
 
@@ -17,11 +21,10 @@ Feel free to contribute to make this open-source project become better for every
 - [x] Implementing repository.
 - [x] Adding the Mock datas & mock services.
 - [x] Implementing the Coordinator by RxFlow.
-- [ ] Implementing Views by SwiftUI.
+- [x] Implementing Views by SwiftUI.
 - [ ] Implementing repository by real API services from TheMovieDB.
 - [ ] Supporting an entry point from deep link by RxFlow.
 - [ ] Supporting multi schemes for mock & real services.
-
 
 ## Installation
 We're using the [**Carthage**](https://github.com/Carthage/Carthage) dependency manager instead of **Cocoapods** to speed up the build time. </br>
