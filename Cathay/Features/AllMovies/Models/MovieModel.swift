@@ -22,20 +22,6 @@ public struct MovieModel: Identifiable, Decodable, Equatable {
     var backDropImageURL: URL? {
         return URL(string: Constants.urlImageString + backDropImageURLString)
     }
-    var posterImage: Single<UIImage> {
-        if let posterImageURL = posterImageURL {
-            return ImageAPIClient.shared.requestImageData(fromUrl: posterImageURL).map { UIImage(data: $0) }.asObservable().filterNil().asSingle()
-        } else {
-            return Single.error(APIErrors.failure)
-        }
-    }
-    var backDropImage: Single<UIImage> {
-        if let backDropImageURL = backDropImageURL {
-            return ImageAPIClient.shared.requestImageData(fromUrl: backDropImageURL).map { UIImage(data: $0) }.asObservable().filterNil().asSingle()
-        } else {
-            return Single.error(APIErrors.failure)
-        }
-    }
         
     public let id: Int
     let title: String

@@ -12,6 +12,8 @@
 		AA49007523857E54001DE1AF /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA49007423857E54001DE1AF /* RxTest.framework */; };
 		AA49007623857E66001DE1AF /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA49007423857E54001DE1AF /* RxTest.framework */; };
 		AA49007723857E6C001DE1AF /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9D643123767F8D007130CA /* RxBlocking.framework */; };
+		AA49007923857FBB001DE1AF /* Reactive+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA49007823857FBB001DE1AF /* Reactive+Extensions.swift */; };
+		AA49007A23857FBB001DE1AF /* Reactive+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA49007823857FBB001DE1AF /* Reactive+Extensions.swift */; };
 		AA4FB6632382BEA600385200 /* AllMoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4FB6622382BEA600385200 /* AllMoviesView.swift */; };
 		AA4FB6652382BED800385200 /* MovieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4FB6642382BED800385200 /* MovieRow.swift */; };
 		AA4FB6672382D44100385200 /* MovieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4FB6642382BED800385200 /* MovieRow.swift */; };
@@ -104,6 +106,7 @@
 /* Begin PBXFileReference section */
 		AA49006F23857B49001DE1AF /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = Carthage/Build/iOS/MBProgressHUD.framework; sourceTree = "<group>"; };
 		AA49007423857E54001DE1AF /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
+		AA49007823857FBB001DE1AF /* Reactive+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+Extensions.swift"; sourceTree = "<group>"; };
 		AA4FB6622382BEA600385200 /* AllMoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMoviesView.swift; sourceTree = "<group>"; };
 		AA4FB6642382BED800385200 /* MovieRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRow.swift; sourceTree = "<group>"; };
 		AA6E0B6B2377018200E4EB92 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
@@ -230,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				AA98E518237ADF2200A0CEA2 /* Extensions.swift */,
+				AA49007823857FBB001DE1AF /* Reactive+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -579,6 +583,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA49007923857FBB001DE1AF /* Reactive+Extensions.swift in Sources */,
 				AA6E0B6F237702E700E4EB92 /* MovieModel.swift in Sources */,
 				AA6E0B6C2377018200E4EB92 /* ViewModelType.swift in Sources */,
 				AA98E51D237AE8A900A0CEA2 /* GenreModel.swift in Sources */,
@@ -608,6 +613,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA49007A23857FBB001DE1AF /* Reactive+Extensions.swift in Sources */,
 				AA4FB6682382D44400385200 /* AllMoviesView.swift in Sources */,
 				AA98E52C237AEB0300A0CEA2 /* MainStepper.swift in Sources */,
 				AA98E525237AEADE00A0CEA2 /* AllMoviesResponseModel.swift in Sources */,
@@ -792,6 +798,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "";
+				"OTHER_SWIFT_FLAGS[arch=*]" = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevedao.cathay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

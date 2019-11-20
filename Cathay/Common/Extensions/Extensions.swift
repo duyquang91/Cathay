@@ -7,10 +7,7 @@
 //
 
 import Foundation
-import RxSwift
-import RxCocoa
-import RxOptional
-import SwiftUI
+import UIKit
 
 extension Bundle {
     func getObject<T: Decodable>(fromJsonFile: String) throws -> T {
@@ -22,34 +19,19 @@ extension Bundle {
     }
 }
 
-extension RxSwift.Reactive where Base: UIViewController {
-    public var viewDidLoad: Observable<Void> {
-        return methodInvoked(#selector(UIViewController.viewDidLoad))
-            .map { _ in return }
+extension UIViewController {
+    func showAlert(title: String? = nil, message: String? = nil) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
-    
-    public var viewDidLayoutSubviews: Observable<Void> {
-        return methodInvoked(#selector(UIViewController.viewDidLayoutSubviews))
-            .map { _ in return }
+}
+
+extension NSError {
+    static var wrongJsonFormat: NSError {
+        return NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Wrong JSON data format!"])
     }
-    
-    public var viewWillAppear: Observable<Bool> {
-        return methodInvoked(#selector(UIViewController.viewWillAppear))
-            .map { $0.first as? Bool ?? false }
-    }
-    
-    public var viewDidAppear: Observable<Bool> {
-        return methodInvoked(#selector(UIViewController.viewDidAppear))
-            .map { $0.first as? Bool ?? false }
-    }
-    
-    public var viewWillDisappear: Observable<Bool> {
-        return methodInvoked(#selector(UIViewController.viewWillDisappear))
-            .map { $0.first as? Bool ?? false }
-    }
-    
-    public var viewDidDisappear: Observable<Bool> {
-        return methodInvoked(#selector(UIViewController.viewDidDisappear))
-            .map { $0.first as? Bool ?? false }
+    static var mockError: NSError {
+        return NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "This is a mock Error for testing purpose!"])
     }
 }

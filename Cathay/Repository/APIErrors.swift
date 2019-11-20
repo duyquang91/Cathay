@@ -8,6 +8,4 @@
 
 import Foundation
 
-enum APIErrors: Error {
-    case failure
-}
+

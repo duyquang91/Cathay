@@ -11,13 +11,13 @@ import SDWebImageSwiftUI
 
 struct MovieDetailView: View {
     
-    let movie: MovieModel
+    let movie: MovieModel?
     
     var body: some View {
         VStack(alignment: .leading, spacing: 4, content: {
-            WebImage(url: movie.backDropImageURL).resizable().scaledToFit()
-            Text(movie.title).font(.title).bold()
-            Text(movie.overView ?? "").font(.subheadline).italic()
+            WebImage(url: movie?.backDropImageURL).resizable().scaledToFit()
+            Text(movie?.title ?? "").font(.title).bold()
+            Text(movie?.overView ?? "").font(.subheadline).italic()
         }).frame(alignment: .top)
     }
 }

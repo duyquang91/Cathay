@@ -24,32 +24,44 @@ class AllMoviesViewController: UIViewController, NibOwnerLoadable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let viewController = UIHostingController(rootView: AllMoviesView(movies: MovieModel.mockData))
-        self.addChild(viewController)
-        viewController.view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        viewController.view.frame = self.view.bounds
-        self.view.addSubview(viewController.view)
-        viewController.didMove(toParent: self)
-
         title = "All Movies"
-        
-        let outputs = viewModel.transform(input: AllMoviesViewModel.Input(refreshTrigger: refreshTrigger.asObservable(),
-                                                            loadMoreTrigger: loadMoreTrigger.asObservable(),
-                                                            showMovieDetailTrigger: showMovieDetailTrigger.asObservable()))
-        outputs.movies.asDriver(onErrorJustReturn: [])
-            .debug("outputs.movies")
-            .drive(onNext: { movies in
-                viewController.rootView.movies = movies
-            })
-            .disposed(by: disposeBag)
-        
-        viewController.rootView.detailMovie
-            .bind(to: showMovieDetailTrigger)
-            .disposed(by: disposeBag)
+        bindingViewModel()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         refreshTrigger.accept(())
+    }
+    
+    private func bindingViewModel() {
+        // Embed SwiftUI
+        let viewController = UIHostingController(rootView: AllMoviesView(movies: []))
+        self.addChild(viewController)
+        viewController.view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        viewController.view.frame = self.view.bounds
+        self.view.addSubview(viewController.view)
+        viewController.didMove(toParent: self)
+        
+        // Binding
+        let outputs = viewModel.transform(input: AllMoviesViewModel.Input(refreshTrigger: refreshTrigger.asObservable(),
+                                                            loadMoreTrigger: loadMoreTrigger.asObservable(),
+                                                            showMovieDetailTrigger: showMovieDetailTrigger.asObservable()))
+        outputs.movies.asDriver(onErrorJustReturn: [])
+            .drive(onNext: { movies in
+                viewController.rootView.movies = movies
+            })
+            .disposed(by: disposeBag)
+        
+        outputs.isLoading
+            .bind(to: self.view.rx.isLoadingHUD)
+            .disposed(by: disposeBag)
+        
+        outputs.errors
+            .bind(to: self.rx.errorAlert)
+            .disposed(by: disposeBag)
+        
+        viewController.rootView.detailMovie
+            .bind(to: showMovieDetailTrigger)
+            .disposed(by: disposeBag)
     }
 }
