@@ -10,8 +10,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Setup
-      run: xcode-select -switch /Applications/Xcode_11.2.1.app && sh ./setup.sh
-    - name: Build
-      run: xcodebuild -sdk iphonesimulator -scheme Cathay -configuration Debug build
+      run: xcodebuild -version && sh ./setup.sh
+    #- name: Build
+    #  run: xcodebuild -sdk iphonesimulator -scheme Cathay -configuration Debug build
     - name: Run Unit Tests
       run: xcodebuild test -scheme CathayTests -destination 'platform=iOS Simulator,OS=13.2.2,name=iPhone 11'
