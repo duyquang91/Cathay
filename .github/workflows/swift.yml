@@ -8,10 +8,10 @@ jobs:
     runs-on: macOS-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@master
     - name: Setup
       run: xcodebuild -version && sh ./setup.sh
-    #- name: Build
-    #  run: xcodebuild -sdk iphonesimulator -scheme Cathay -configuration Debug build
+    - name: Build
+      run: xcodebuild -sdk iphonesimulator -scheme Cathay -configuration Debug build
     - name: Run Unit Tests
       run: xcodebuild test -scheme CathayTests -destination 'platform=iOS Simulator,OS=13.2.2,name=iPhone 11'
