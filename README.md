@@ -33,6 +33,7 @@ Feel free to contribute to make this open-source project become better for every
 - [ ] Implementing repository by real API services from TheMovieDB.
 - [ ] Supporting an entry point from deep link by RxFlow.
 - [ ] Supporting multi schemes for mock & real services.
+- [ ] Using Swinject/SwinjectStoryboard for depenencies injection.
 
 ## Installation
 We're using the [**Carthage**](https://github.com/Carthage/Carthage) dependency manager instead of **Cocoapods** to speed up the build time. </br>
