@@ -13,3 +13,5 @@ jobs:
       run: sh ./setup.sh
     - name: Build
       run: xcodebuild -sdk iphonesimulator -target Cathay -configuration Debug build
+    - name: Run Unit Tests
+      run: xcodebuild test -scheme CathayTests -destination 'platform=iOS Simulator,OS=13.2.2,name=iPhone 11'
