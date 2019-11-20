@@ -12,6 +12,4 @@ jobs:
     - name: Setup
       run: sh ./setup.sh
     - name: Build
-      run: swift build -v
-    - name: Run tests
-      run: swift test -v
+      run: xcodebuild -sdk iphonesimulator -target Cathay build
