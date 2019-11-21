@@ -21,6 +21,6 @@ else
 fi
 
 echo "Installing dependancies..."
-carthage update --platform iOS --cache-builds
+carthage update --platform iOS --no-use-binaries --cache-builds
 echo "Opening project by Xcode..."
 open ./Cathay.xcodeproj

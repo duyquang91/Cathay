@@ -1,9 +1,9 @@
 {
-  "commitish" : "2.5.0",
+  "commitish" : "2.6.0",
   "iOS" : [
     {
       "name" : "RxFlow",
-      "hash" : "a476dcb4327c183d541207d778a19c99de037b711c1ddd9772f24971bc86b8a0",
+      "hash" : "13606507cd65ebe641eb2a81f7db2b5508e660016074aaaccc345ac370b80299",
       "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
     }
   ]
