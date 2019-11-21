@@ -19,8 +19,12 @@ struct MockMovieRepository: MovieRepositoryType {
     
     func loadAllMovies(page: Int) -> Single<AllMoviesResponseModel> {
         do {
-            let object: AllMoviesResponseModel = try Bundle.main.getObject(fromJsonFile: "AllMovies")
-            return Single.just(object)
+            if Bool.random() {
+                let object: AllMoviesResponseModel = try Bundle.main.getObject(fromJsonFile: "AllMovies")
+                return Single.just(object).delay(2, scheduler: MainScheduler.instance)
+            } else {
+                return Single.error(NSError.mockError).delay(2, scheduler: MainScheduler.instance)
+            }
         } catch (let error) {
             return Single.error(error)
         }
@@ -28,8 +32,12 @@ struct MockMovieRepository: MovieRepositoryType {
     
     func loadMovieDetail(id: String) -> Single<MovieModel> {
         do {
-            let object: MovieModel = try Bundle.main.getObject(fromJsonFile: "MovieDetail")
-            return Single.just(object)
+            if Bool.random() {
+                let object: MovieModel = try Bundle.main.getObject(fromJsonFile: "MovieDetail")
+                return Single.just(object).delay(2, scheduler: MainScheduler.instance)
+            } else {
+                return Single.error(NSError.mockError).delay(2, scheduler: MainScheduler.instance)
+            }
         } catch (let error) {
             return Single.error(error)
         }

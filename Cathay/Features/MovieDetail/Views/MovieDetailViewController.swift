@@ -22,9 +22,10 @@ class MovieDetailViewController: UIViewController, NibOwnerLoadable {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Movie Detail"
-        
-        rx.viewDidAppear.debug("tets").subscribe().disposed(by: disposeBag)
-
+        bindingViewModel()
+    }
+    
+    private func bindingViewModel() {
         let outputs = viewModel.transform(input: MovieDetailViewModel.Input(refreshTrigger: self.rx.viewDidAppear.mapTo(())))
         
         outputs.movieModel.debug("test")
@@ -35,8 +36,8 @@ class MovieDetailViewController: UIViewController, NibOwnerLoadable {
                 
                 self.children.forEach { child in
                     child.view.removeFromSuperview()
+                    child.willMove(toParent: nil)
                     child.removeFromParent()
-                    child.didMove(toParent: nil)
                 }
                 
                 let child = UIHostingController(rootView: MovieDetailView(movie: movie))
@@ -46,6 +47,14 @@ class MovieDetailViewController: UIViewController, NibOwnerLoadable {
                 self.addChild(child)
                 child.didMove(toParent: self)
             })
+            .disposed(by: disposeBag)
+        
+        outputs.isLoading
+            .bind(to: self.view.rx.isLoadingHUD)
+            .disposed(by: disposeBag)
+        
+        outputs.errors
+            .bind(to: self.rx.errorAlert)
             .disposed(by: disposeBag)
     }
 }
