@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Setup
-      run: sh ./setup.sh
+      run: sh ./setup.sh && ls -r
     #- name: Build
     #  run: xcodebuild -sdk iphonesimulator -scheme Cathay -configuration Debug build
     - name: Run Unit Tests
