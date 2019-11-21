@@ -27,7 +27,6 @@
 		AA98E533237AEDA100A0CEA2 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9D643B23767F95007130CA /* RxRelay.framework */; };
 		AA98E534237AEDA100A0CEA2 /* RxOptional.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADA8B662376EAE9000AE3BA /* RxOptional.framework */; };
 		AA98E535237AEDA100A0CEA2 /* RxSwiftExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADA8B692376EAEE000AE3BA /* RxSwiftExt.framework */; };
-		AA98E536237AEDA100A0CEA2 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADA8B5D2376EADE000AE3BA /* Differentiator.framework */; };
 		AA98E538237AEDA100A0CEA2 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9D643123767F8D007130CA /* RxBlocking.framework */; };
 		AA98E539237AEDA100A0CEA2 /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADA8B592376EADB000AE3BA /* Action.framework */; };
 		AA98E53A237AEDA100A0CEA2 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9D643523767F90007130CA /* RxCocoa.framework */; };
@@ -60,7 +59,6 @@
 		DC78D4E4238663DD008E356B /* RxOptional.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1C36B12386623C00058373 /* RxOptional.framework */; };
 		DC78D4E6238663DD008E356B /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1C36B72386623C00058373 /* RxCocoa.framework */; };
 		DC78D4EA238663DD008E356B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1C36B92386623C00058373 /* RxSwift.framework */; };
-		DC78D4EC238663DD008E356B /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1C36BC2386623C00058373 /* Differentiator.framework */; };
 		DC78D4EE238663DD008E356B /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1C36BF2386623C00058373 /* RxBlocking.framework */; };
 		DCB8E41D2383932800CA85A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB8E41C2383932800CA85A1 /* Constants.swift */; };
 		DCB8E41F23839DD100CA85A1 /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB8E41E23839DD000CA85A1 /* APIErrors.swift */; };
@@ -158,7 +156,6 @@
 				DC78D4DE238663DC008E356B /* MBProgressHUD.framework in Frameworks */,
 				DC78D4D2238663DC008E356B /* RxSwiftExt.framework in Frameworks */,
 				DC78D4D0238663DC008E356B /* Action.framework in Frameworks */,
-				DC78D4EC238663DD008E356B /* Differentiator.framework in Frameworks */,
 				DC78D4DA238663DC008E356B /* RxTest.framework in Frameworks */,
 				DC78D4E0238663DC008E356B /* Reusable.framework in Frameworks */,
 				DC78D4E4238663DD008E356B /* RxOptional.framework in Frameworks */,
@@ -178,7 +175,6 @@
 				AA98E533237AEDA100A0CEA2 /* RxRelay.framework in Frameworks */,
 				AA98E534237AEDA100A0CEA2 /* RxOptional.framework in Frameworks */,
 				AA98E535237AEDA100A0CEA2 /* RxSwiftExt.framework in Frameworks */,
-				AA98E536237AEDA100A0CEA2 /* Differentiator.framework in Frameworks */,
 				AA98E538237AEDA100A0CEA2 /* RxBlocking.framework in Frameworks */,
 				AA49007323857D31001DE1AF /* MBProgressHUD.framework in Frameworks */,
 				AA98E539237AEDA100A0CEA2 /* Action.framework in Frameworks */,
