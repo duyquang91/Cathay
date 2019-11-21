@@ -9,8 +9,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@master
-    - name: Setup
-      run: sh ./setup.sh
+    - name: Setup Carthage
+      run: carthage update --platform iOS --no-use-binaries
     #- name: Build
     #  run: xcodebuild -sdk iphonesimulator -scheme Cathay -configuration Debug build
     - name: Run Unit Tests
