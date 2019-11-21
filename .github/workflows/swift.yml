@@ -14,4 +14,4 @@ jobs:
     #- name: Build
     #  run: xcodebuild -sdk iphonesimulator -scheme Cathay -configuration Debug build
     - name: Run Unit Tests
-      run: xcodebuild clean test -project Cathay.xcodeproj -scheme CathayTests -destination 'platform=iOS Simulator,OS=13.1,name=iPhone 11'
+      run: xcodebuild clean test -sdk iphonesimulator -project Cathay.xcodeproj -scheme Cathay -destination 'platform=iOS Simulator,OS=13.1,name=iPhone 11'
