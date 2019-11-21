@@ -1,9 +1,10 @@
 name: Notify
 
 on: 
-  commit_comment: 
-  - 'feat: *'
-
+  push:
+    branches: 
+      - master
+  commit_comment: 'feat: *'
 
 jobs:
   build:
