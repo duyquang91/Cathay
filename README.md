@@ -1,5 +1,6 @@
 # Cathay
 
+![](https://github.com/duyquang91/Cathay/workflows/Unit%20Tests/badge.svg)
 ![](https://img.shields.io/badge/platform-iOS-red)
 ![](https://img.shields.io/badge/swift-5.0.1-red)
 ![](https://img.shields.io/badge/xcode-11.2.1-blue)
