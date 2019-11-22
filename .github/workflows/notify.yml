@@ -1,0 +1,18 @@
+name: Notify
+
+on: 
+  push:
+    branches: 
+      - master
+  commit_comment: 'feat: *'
+
+jobs:
+  build:
+
+    runs-on: macOS-latest
+
+    steps:
+    - name: Run a multi-line script
+      run: |
+        echo Add other actions to build,
+        echo test, and deploy your project.
