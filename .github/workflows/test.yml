@@ -10,8 +10,8 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Setup
-      run: sh ./setup.sh
-    #- name: Build
-    #  run: xcodebuild -sdk iphonesimulator -scheme Cathay -configuration Debug build
+      run: sh ./setup.sh && gem install danger-xcov
     - name: Run Unit Tests
       run: xcodebuild clean test -sdk iphonesimulator -project Cathay.xcodeproj -scheme Cathay -destination 'platform=iOS Simulator,OS=13.1,name=iPhone 11'
+    - name: Run Danger
+      uses: danger/swift@2.0.3
