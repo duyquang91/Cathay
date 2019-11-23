@@ -19,6 +19,8 @@ struct AllMoviesView: View {
         self.movies = movies
     }
     
+    
+    
     var body: some View {
         List(movies) { movie in
             return MovieRow(movie: movie).onTapGesture { self.detailMovie.accept(movie) }
