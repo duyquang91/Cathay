@@ -61,7 +61,6 @@
 		DC78D4EA238663DD008E356B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1C36B92386623C00058373 /* RxSwift.framework */; };
 		DC78D4EE238663DD008E356B /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1C36BF2386623C00058373 /* RxBlocking.framework */; };
 		DCB8E41D2383932800CA85A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB8E41C2383932800CA85A1 /* Constants.swift */; };
-		DCB8E41F23839DD100CA85A1 /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB8E41E23839DD000CA85A1 /* APIErrors.swift */; };
 		DCD72B772383D9D4005A20DD /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD72B762383D9D4005A20DD /* MovieDetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -140,7 +139,6 @@
 		DC1C36BC2386623C00058373 /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Differentiator.framework; sourceTree = "<group>"; };
 		DC1C36BF2386623C00058373 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxBlocking.framework; sourceTree = "<group>"; };
 		DCB8E41C2383932800CA85A1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		DCB8E41E23839DD000CA85A1 /* APIErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrors.swift; sourceTree = "<group>"; };
 		DCD72B702383CC3C005A20DD /* SDWebImageSwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImageSwiftUI.framework; path = Carthage/Build/iOS/SDWebImageSwiftUI.framework; sourceTree = "<group>"; };
 		DCD72B762383D9D4005A20DD /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -238,7 +236,6 @@
 				AA6E0B782377077500E4EB92 /* APIRequest.swift */,
 				AA6E0B742377057200E4EB92 /* APIClient.swift */,
 				AA6E0B762377067600E4EB92 /* MovieRepository.swift */,
-				DCB8E41E23839DD000CA85A1 /* APIErrors.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -463,6 +460,7 @@
 				AA9D64042376754D007130CA /* Resources */,
 				AA9D642C23767EC7007130CA /* Carthage */,
 				DC1C0DDE2386614F00058373 /* Carthage Outdate */,
+				AAB35BDF2389007900D20DFD /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -596,6 +594,24 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
+		AAB35BDF2389007900D20DFD /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		DC1C0DDE2386614F00058373 /* Carthage Outdate */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -630,7 +646,6 @@
 				AA4FB6652382BED800385200 /* MovieRow.swift in Sources */,
 				AA4FB6632382BEA600385200 /* AllMoviesView.swift in Sources */,
 				AA6E0B772377067600E4EB92 /* MovieRepository.swift in Sources */,
-				DCB8E41F23839DD100CA85A1 /* APIErrors.swift in Sources */,
 				AADA8B552376E62E000AE3BA /* AllMoviesViewController.swift in Sources */,
 				DCD72B772383D9D4005A20DD /* MovieDetailView.swift in Sources */,
 				AADA8B4D2376E407000AE3BA /* MainFlow.swift in Sources */,

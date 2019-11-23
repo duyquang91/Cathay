@@ -13,14 +13,11 @@ protocol URLRequestConvertable {
 }
 
 struct APIRequest: URLRequestConvertable {
-    
     enum HTTPMethod: String {
         case get, post, put, delete
     }
-    
     let url: String
     let method: HTTPMethod
-    
     var urlRequest: URLRequest {
         var request = URLRequest(url: URL(string: url)!)
         request.httpMethod = method.rawValue

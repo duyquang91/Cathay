@@ -13,7 +13,7 @@ import RxOptional
 import UIKit
 
 public struct MovieModel: Identifiable, Decodable, Equatable {
-
+    
     private let posterImageURLString: String
     private let backDropImageURLString: String
     var posterImageURL: URL? {
@@ -22,13 +22,12 @@ public struct MovieModel: Identifiable, Decodable, Equatable {
     var backDropImageURL: URL? {
         return URL(string: Constants.urlImageString + backDropImageURLString)
     }
-        
+    
     public let id: Int
     let title: String
     let popularity: Double
     let overView: String?
     let genres: [GenreModel]?
-
     
     enum CodingKeys: String, CodingKey {
         case id, title, popularity, genres
@@ -42,8 +41,11 @@ public struct MovieModel: Identifiable, Decodable, Equatable {
     }
     
     static var mockData: [MovieModel] {
-        let respone = try! Bundle.main.getObject(fromJsonFile: "AllMovies") as AllMoviesResponseModel
-        return respone.results
+        if let respone = try? Bundle.main.getObject(fromJsonFile: "AllMovies") as AllMoviesResponseModel {
+            return respone.results
+        } else {
+            return []
+        }
     }
 }
 

@@ -16,16 +16,15 @@ protocol MovieRepositoryType {
 }
 
 struct MockMovieRepository: MovieRepositoryType {
-    
     func loadAllMovies(page: Int) -> Single<AllMoviesResponseModel> {
         do {
             if Bool.random() {
                 let object: AllMoviesResponseModel = try Bundle.main.getObject(fromJsonFile: "AllMovies")
-                return Single.just(object).delay(2, scheduler: MainScheduler.instance)
+                return Single.just(object).delay(.seconds(2), scheduler: MainScheduler.instance)
             } else {
-                return Single.error(NSError.mockError).delay(2, scheduler: MainScheduler.instance)
+                return Single.error(NSError.mockError).delay(.seconds(2), scheduler: MainScheduler.instance)
             }
-        } catch (let error) {
+        } catch let error {
             return Single.error(error)
         }
     }
@@ -34,11 +33,11 @@ struct MockMovieRepository: MovieRepositoryType {
         do {
             if Bool.random() {
                 let object: MovieModel = try Bundle.main.getObject(fromJsonFile: "MovieDetail")
-                return Single.just(object).delay(2, scheduler: MainScheduler.instance)
+                return Single.just(object).delay(.seconds(2), scheduler: MainScheduler.instance)
             } else {
-                return Single.error(NSError.mockError).delay(2, scheduler: MainScheduler.instance)
+                return Single.error(NSError.mockError).delay(.seconds(2), scheduler: MainScheduler.instance)
             }
-        } catch (let error) {
+        } catch let error {
             return Single.error(error)
         }
     }

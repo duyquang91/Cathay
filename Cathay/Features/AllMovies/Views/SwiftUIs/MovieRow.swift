@@ -15,7 +15,13 @@ struct MovieRow: View {
     
     var body: some View {
         HStack {
-            WebImage(url: movie.posterImageURL).resizable().animation(.easeInOut(duration: 0.35)).transition(.fade).scaledToFit().frame(maxHeight: 150)
+            WebImage(url: movie.posterImageURL)
+                .resizable()
+                .animation(.easeInOut(duration: 0.35))
+                .transition(.fade)
+                .scaledToFit()
+                .frame(maxHeight: 150)
+            
             VStack(alignment: .leading, spacing: 4, content: {
                 Text(movie.title).font(.body)
                 Text(movie.overView ?? "").font(.caption).lineLimit(7).foregroundColor(Color.gray)

@@ -14,10 +14,10 @@ import RxFlow
 import Action
 
 class AllMoviesViewModel: ViewModelType, Stepper {
-    
     private let movieRepository: MovieRepositoryType
     private let disposeBag = DisposeBag()
     private lazy var loadAllMoviesAction = Action<Int, AllMoviesResponseModel>(workFactory: { page -> Single<AllMoviesResponseModel> in
+        
         return self.movieRepository.loadAllMovies(page: page)
     })
     
