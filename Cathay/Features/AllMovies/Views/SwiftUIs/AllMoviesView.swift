@@ -31,3 +31,7 @@ struct AllMoviesView_Previews: PreviewProvider {
         AllMoviesView(movies: MovieModel.mockData).previewDevice(PreviewDevice.init(rawValue: "iPhone SE"))
     }
 }
+
+
+
+
