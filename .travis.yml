@@ -1,11 +1,22 @@
 osx_image: xcode11.2
 language: swift
 os: osx
+
 xcode_project: Cathay.xcodeproj
 xcode_scheme: Cathay
 xcode_destination: platform=iOS Simulator,OS=13.2.2,name=iPhone 11
+
 cache:
   directories:
     - Carthage
+    - ~/.danger-swift
+
 before_install:
   - sh ./setup.sh
+
+install:
+- npm install -g danger
+- swift build
+
+script:
+- swift run danger-swift ci
