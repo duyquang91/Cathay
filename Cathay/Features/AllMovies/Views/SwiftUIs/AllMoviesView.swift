@@ -36,3 +36,9 @@ struct AllMoviesView_Previews: PreviewProvider {
 
 
 
+
+
+
+
+
+
