@@ -16,4 +16,4 @@ before_install:
   - brew install danger/tap/danger-swift
 
 script:
-- danger-swift ci
+- danger-swift ci pr https://github.com/duyquang91/Cathay/pulls/${TRAVIS_PULL_REQUEST}

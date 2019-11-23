@@ -1,15 +1,15 @@
-name: Unit Tests
-
-on: [push]
-
-jobs:
-  build:
-
-    runs-on: macOS-latest
-
-    steps:
-    - uses: actions/checkout@master
-    - name: Setup
-      run: sh ./setup.sh
-    - name: Run Unit Tests
-      run: xcodebuild clean test -sdk iphonesimulator -project Cathay.xcodeproj -scheme Cathay -destination 'platform=iOS Simulator,OS=13.1,name=iPhone 11'
+# name: Unit Tests
+#
+# on: [push]
+#
+# jobs:
+#   build:
+#
+#     runs-on: macOS-latest
+#
+#     steps:
+#     - uses: actions/checkout@master
+#     - name: Setup
+#       run: sh ./setup.sh
+#     - name: Run Unit Tests
+#       run: xcodebuild clean test -sdk iphonesimulator -project Cathay.xcodeproj -scheme Cathay -destination 'platform=iOS Simulator,OS=13.1,name=iPhone 11'
