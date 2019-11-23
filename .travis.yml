@@ -16,4 +16,4 @@ before_install:
   - brew install danger/tap/danger-swift
 
 script:
-- danger-swift ci pr TRAVIS_PULL_REQUEST
+- danger-swift ci pr $TRAVIS_PULL_REQUEST
