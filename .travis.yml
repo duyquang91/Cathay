@@ -13,10 +13,7 @@ cache:
 
 before_install:
   - sh ./setup.sh
-
-install:
-- npm install -g danger
-- swift build
+  - brew install danger/tap/danger-swift
 
 script:
-- swift run danger-swift ci
+- danger-swift ci
