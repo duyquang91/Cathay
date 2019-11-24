@@ -16,4 +16,5 @@ before_install:
   - brew install danger/tap/danger-swift
 
 script:
+- xcodebuild test -scheme DangerSwiftCoverage-Package -derivedDataPath Build/ -enableCodeCoverage YES
 - danger-swift ci pr https://github.com/duyquang91/Cathay/pulls/${TRAVIS_PULL_REQUEST}

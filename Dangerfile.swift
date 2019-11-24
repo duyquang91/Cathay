@@ -4,5 +4,4 @@ import DangerSwiftCoverage // package: https://github.com/f-meloni/danger-swift-
 SwiftLint.lint(inline: true)
 
 Coverage.xcodeBuildCoverage(.derivedDataFolder("Build"),
-                            minimumCoverage: 90,
-                            excludedTargets: ["CathayTests.xctest"])
+                            minimumCoverage: 90)
