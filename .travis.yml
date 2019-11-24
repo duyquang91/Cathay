@@ -16,5 +16,5 @@ before_install:
   - brew install danger/tap/danger-swift
 
 script:
-- xcodebuild test -scheme Cathay -derivedDataPath Build/ -enableCodeCoverage YES
+- xcodebuild test -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=13.2.2,name=iPhone 11' -scheme Cathay -derivedDataPath Build/ -enableCodeCoverage YES
 - danger-swift ci pr https://github.com/duyquang91/Cathay/pulls/${TRAVIS_PULL_REQUEST}
