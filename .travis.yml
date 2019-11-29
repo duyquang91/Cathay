@@ -19,4 +19,5 @@ before_install:
 script:
 - xcodebuild test -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=13.2.2,name=iPhone 11' -scheme Cathay -derivedDataPath Build/ -enableCodeCoverage YES
 - xcparse codecov ./build/Logs/Test/*.xcresult ./build/Logs/Test
+- xcparse logs ./build/Logs/Test/*.xcresult ./build/Logs/Test
 - danger-swift ci pr https://github.com/duyquang91/Cathay/pulls/${TRAVIS_PULL_REQUEST}
