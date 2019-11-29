@@ -22,7 +22,7 @@ We're applying some keys:
 
 Feel free to contribute to make this open-source project become better for everyone who love reactive programming & MVVM architecture.
 
-## Checklists
+## Checklist
 - [x] Building the base project by MVVM architecture.
 - [x] Adding the Carthage dependency manager & all needed dependencies.
 - [x] Implementing all needed ViewModels.
@@ -35,7 +35,8 @@ Feel free to contribute to make this open-source project become better for every
 - [ ] Supporting an entry point from deep link by RxFlow.
 - [ ] Supporting multi schemes for mock & real services.
 - [ ] Using Swinject/SwinjectStoryboard for depenencies injection.
-- [ ] Support showing code coverage by Danger. 
+- [ ] Support showing code coverage by Danger.
+- [x] Showing code coverage locally by Slather.
 
 ## Installation
 We're using the [**Carthage**](https://github.com/Carthage/Carthage) dependency manager instead of **Cocoapods** to speed up the build time. </br>
@@ -61,6 +62,13 @@ Apple has introduced **StoryBoard** & **Segue** to navigate between screens. It'
 ### SwiftUI:
 We're applying the **SwiftUI** to implement the UI for all screens.
 ![](./srcs/screen_shoot1.png)
+
+### Code Coverage:
+We're using the [**Slather**](https://github.com/SlatherOrg/slather) to show the code coverage by a html page. To see it, just run this script at the terminal:
+```
+  sh ./viewCodeCoverageReport.sh
+```
+![](./srcs/slather.png)
 
 ## License
 
