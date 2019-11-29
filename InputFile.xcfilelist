@@ -10,3 +10,4 @@ $(SRCROOT)/Carthage/Build/iOS/RxSwiftExt.framework
 $(SRCROOT)/Carthage/Build/iOS/Reusable.framework
 $(SRCROOT)/Carthage/Build/iOS/SDWebImageSwiftUI.framework
 $(SRCROOT)/Carthage/Build/iOS/MBProgressHUD.framework
+$(SRCROOT)/Carthage/Build/iOS/OHHTTPStubs.framework

@@ -13,3 +13,4 @@ ignore:
   - Cathay/Features/MovieDetail/Views/SwiftUIs/MovieDetailView.swift
   - Cathay/AppDelegate.swift
   - Cathay/SceneDelegate.swift
+  - Cathay/Repository/MovieRepository.swift

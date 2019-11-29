@@ -26,20 +26,3 @@ class APIClient: APIClientType {
             .asSingle()
     }
 }
-
-// Only for image data request
-class ImageAPIClient {
-    static let shared = ImageAPIClient()
-    private let urlSeesion: URLSession
-    
-    init() {
-        let configuration = URLSessionConfiguration.default
-        configuration.requestCachePolicy = .returnCacheDataElseLoad
-        
-        self.urlSeesion = URLSession(configuration: configuration)
-    }
-    
-    func requestImageData(fromUrl url: URL) -> Single<Data> {
-        return urlSeesion.rx.data(request: URLRequest(url: url)).asSingle()
-    }
-}

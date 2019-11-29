@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA49007323857D31001DE1AF /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA49006F23857B49001DE1AF /* MBProgressHUD.framework */; };
-		AA49007523857E54001DE1AF /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA49007423857E54001DE1AF /* RxTest.framework */; };
 		AA49007923857FBB001DE1AF /* Reactive+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA49007823857FBB001DE1AF /* Reactive+Extensions.swift */; };
 		AA4FB6632382BEA600385200 /* AllMoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4FB6622382BEA600385200 /* AllMoviesView.swift */; };
 		AA4FB6652382BED800385200 /* MovieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4FB6642382BED800385200 /* MovieRow.swift */; };
@@ -22,15 +20,6 @@
 		AA98E51B237AE6A200A0CEA2 /* MovieDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = AA98E51A237AE6A200A0CEA2 /* MovieDetail.json */; };
 		AA98E51D237AE8A900A0CEA2 /* GenreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98E51C237AE8A900A0CEA2 /* GenreModel.swift */; };
 		AA98E530237AEB3B00A0CEA2 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98E52F237AEB3B00A0CEA2 /* ModelTests.swift */; };
-		AA98E531237AEDA100A0CEA2 /* Reusable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADA8B602376EAE1000AE3BA /* Reusable.framework */; };
-		AA98E532237AEDA100A0CEA2 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9D643E23767F98007130CA /* RxSwift.framework */; };
-		AA98E533237AEDA100A0CEA2 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9D643B23767F95007130CA /* RxRelay.framework */; };
-		AA98E534237AEDA100A0CEA2 /* RxOptional.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADA8B662376EAE9000AE3BA /* RxOptional.framework */; };
-		AA98E535237AEDA100A0CEA2 /* RxSwiftExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADA8B692376EAEE000AE3BA /* RxSwiftExt.framework */; };
-		AA98E538237AEDA100A0CEA2 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9D643123767F8D007130CA /* RxBlocking.framework */; };
-		AA98E539237AEDA100A0CEA2 /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADA8B592376EADB000AE3BA /* Action.framework */; };
-		AA98E53A237AEDA100A0CEA2 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9D643523767F90007130CA /* RxCocoa.framework */; };
-		AA98E53B237AEDA100A0CEA2 /* RxFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9D643823767F92007130CA /* RxFlow.framework */; };
 		AA9D640A2376754D007130CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9D64092376754D007130CA /* AppDelegate.swift */; };
 		AA9D640C2376754D007130CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9D640B2376754D007130CA /* SceneDelegate.swift */; };
 		AA9D64112376754D007130CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA9D640F2376754D007130CA /* Main.storyboard */; };
@@ -38,6 +27,7 @@
 		AA9D641623767550007130CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA9D641423767550007130CA /* LaunchScreen.storyboard */; };
 		AA9D642123767551007130CA /* CathayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9D642023767551007130CA /* CathayTests.swift */; };
 		AA9D644223768249007130CA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AA9D644123768249007130CA /* README.md */; };
+		AAC1B9E823914A9300C4D6D2 /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC1B9E723914A9300C4D6D2 /* RepositoryTests.swift */; };
 		AACCF0582379A3C400D81E17 /* AllMovies.json in Resources */ = {isa = PBXBuildFile; fileRef = AACCF0572379A3C400D81E17 /* AllMovies.json */; };
 		AADA8B4B2376E362000AE3BA /* MainSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADA8B4A2376E362000AE3BA /* MainSteps.swift */; };
 		AADA8B4D2376E407000AE3BA /* MainFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADA8B4C2376E407000AE3BA /* MainFlow.swift */; };
@@ -108,6 +98,8 @@
 		AA9D643B23767F95007130CA /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		AA9D643E23767F98007130CA /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		AA9D644123768249007130CA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		AAC1B9E723914A9300C4D6D2 /* RepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
+		AAC1B9EB2391511A00C4D6D2 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OHHTTPStubs.framework; sourceTree = "<group>"; };
 		AACCF0572379A3C400D81E17 /* AllMovies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AllMovies.json; sourceTree = "<group>"; };
 		AADA8B4A2376E362000AE3BA /* MainSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSteps.swift; sourceTree = "<group>"; };
 		AADA8B4C2376E407000AE3BA /* MainFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlow.swift; sourceTree = "<group>"; };
@@ -171,17 +163,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA98E531237AEDA100A0CEA2 /* Reusable.framework in Frameworks */,
-				AA98E532237AEDA100A0CEA2 /* RxSwift.framework in Frameworks */,
-				AA49007523857E54001DE1AF /* RxTest.framework in Frameworks */,
-				AA98E533237AEDA100A0CEA2 /* RxRelay.framework in Frameworks */,
-				AA98E534237AEDA100A0CEA2 /* RxOptional.framework in Frameworks */,
-				AA98E535237AEDA100A0CEA2 /* RxSwiftExt.framework in Frameworks */,
-				AA98E538237AEDA100A0CEA2 /* RxBlocking.framework in Frameworks */,
-				AA49007323857D31001DE1AF /* MBProgressHUD.framework in Frameworks */,
-				AA98E539237AEDA100A0CEA2 /* Action.framework in Frameworks */,
-				AA98E53A237AEDA100A0CEA2 /* RxCocoa.framework in Frameworks */,
-				AA98E53B237AEDA100A0CEA2 /* RxFlow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +407,7 @@
 		DC1C36812386623C00058373 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				AAC1B9EB2391511A00C4D6D2 /* OHHTTPStubs.framework */,
 				DC1C36832386623C00058373 /* Action.framework */,
 				DC1C36842386623C00058373 /* RxSwiftExt.framework */,
 				DC1C368F2386623C00058373 /* RxRelay.framework */,
@@ -466,6 +448,7 @@
 			isa = PBXGroup;
 			children = (
 				AA98E52F237AEB3B00A0CEA2 /* ModelTests.swift */,
+				AAC1B9E723914A9300C4D6D2 /* RepositoryTests.swift */,
 			);
 			path = CommonTests;
 			sourceTree = "<group>";
@@ -508,7 +491,6 @@
 				AA9D641823767551007130CA /* Sources */,
 				AA9D641923767551007130CA /* Frameworks */,
 				AA9D641A23767551007130CA /* Resources */,
-				AA98E53D237AF0CE00A0CEA2 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -584,26 +566,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		AA98E53D237AF0CE00A0CEA2 /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"$(SRCROOT)/InputFile.xcfilelist",
-			);
-			inputPaths = (
-			);
-			name = Carthage;
-			outputFileListPaths = (
-				"$(SRCROOT)/OutputFile.xcfilelist",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
 		AA9D642C23767EC7007130CA /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -699,6 +661,7 @@
 				DC7BE90223910CD8002EB3FA /* TestMovieRepository.swift in Sources */,
 				AA9D642123767551007130CA /* CathayTests.swift in Sources */,
 				AA98E530237AEB3B00A0CEA2 /* ModelTests.swift in Sources */,
+				AAC1B9E823914A9300C4D6D2 /* RepositoryTests.swift in Sources */,
 				DC7BE8FE239108D9002EB3FA /* AllMovieViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
