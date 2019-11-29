@@ -42,7 +42,7 @@ Feel free to contribute to make this open-source project become better for every
 We're using the [**Carthage**](https://github.com/Carthage/Carthage) dependency manager instead of **Cocoapods** to speed up the build time. </br>
 We've written a script to let you get started easier. Please go to the root folder of project then run this script at terminal:
 ```
-$ sh ./setup.sh
+  $ sh ./setup.sh
 ```
 Now, take a cup of coffee! Sometime the terminal may ask you something to finish the process, feel free to take a look.
 
@@ -66,7 +66,7 @@ We're applying the **SwiftUI** to implement the UI for all screens.
 ### Code Coverage:
 We're using the [**Slather**](https://github.com/SlatherOrg/slather) to show the code coverage by a html page. To see it, just run this script at the terminal:
 ```
-  sh ./viewCodeCoverageReport.sh
+  $ sh ./viewCodeCoverageReport.sh
 ```
 ![](./srcs/slather.png)
 
