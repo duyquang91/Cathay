@@ -60,6 +60,8 @@
 		DC78D4E6238663DD008E356B /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1C36B72386623C00058373 /* RxCocoa.framework */; };
 		DC78D4EA238663DD008E356B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1C36B92386623C00058373 /* RxSwift.framework */; };
 		DC78D4EE238663DD008E356B /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1C36BF2386623C00058373 /* RxBlocking.framework */; };
+		DC7BE8FE239108D9002EB3FA /* AllMovieViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7BE8FD239108D9002EB3FA /* AllMovieViewModelTests.swift */; };
+		DC7BE90223910CD8002EB3FA /* TestMovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7BE90123910CD8002EB3FA /* TestMovieRepository.swift */; };
 		DCB8E41D2383932800CA85A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB8E41C2383932800CA85A1 /* Constants.swift */; };
 		DCD72B772383D9D4005A20DD /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD72B762383D9D4005A20DD /* MovieDetailView.swift */; };
 /* End PBXBuildFile section */
@@ -138,6 +140,8 @@
 		DC1C36B92386623C00058373 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
 		DC1C36BC2386623C00058373 /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Differentiator.framework; sourceTree = "<group>"; };
 		DC1C36BF2386623C00058373 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxBlocking.framework; sourceTree = "<group>"; };
+		DC7BE8FD239108D9002EB3FA /* AllMovieViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMovieViewModelTests.swift; sourceTree = "<group>"; };
+		DC7BE90123910CD8002EB3FA /* TestMovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMovieRepository.swift; sourceTree = "<group>"; };
 		DCB8E41C2383932800CA85A1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DCD72B702383CC3C005A20DD /* SDWebImageSwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImageSwiftUI.framework; path = Carthage/Build/iOS/SDWebImageSwiftUI.framework; sourceTree = "<group>"; };
 		DCD72B762383D9D4005A20DD /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
@@ -281,7 +285,9 @@
 		AA9D641F23767551007130CA /* CathayTests */ = {
 			isa = PBXGroup;
 			children = (
-				AA98E52F237AEB3B00A0CEA2 /* ModelTests.swift */,
+				DC7D0DFF23910F63009B2331 /* CommonTests */,
+				DC7BE90023910CB3002EB3FA /* MovieDetailTests */,
+				DC7BE8FF23910CA3002EB3FA /* AllMoviesTests */,
 				AA9D642023767551007130CA /* CathayTests.swift */,
 				AA9D642223767551007130CA /* Info.plist */,
 			);
@@ -438,6 +444,30 @@
 				DC1C36BF2386623C00058373 /* RxBlocking.framework */,
 			);
 			path = iOS;
+			sourceTree = "<group>";
+		};
+		DC7BE8FF23910CA3002EB3FA /* AllMoviesTests */ = {
+			isa = PBXGroup;
+			children = (
+				DC7BE8FD239108D9002EB3FA /* AllMovieViewModelTests.swift */,
+				DC7BE90123910CD8002EB3FA /* TestMovieRepository.swift */,
+			);
+			path = AllMoviesTests;
+			sourceTree = "<group>";
+		};
+		DC7BE90023910CB3002EB3FA /* MovieDetailTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MovieDetailTests;
+			sourceTree = "<group>";
+		};
+		DC7D0DFF23910F63009B2331 /* CommonTests */ = {
+			isa = PBXGroup;
+			children = (
+				AA98E52F237AEB3B00A0CEA2 /* ModelTests.swift */,
+			);
+			path = CommonTests;
 			sourceTree = "<group>";
 		};
 		DCD72B752383D9BD005A20DD /* SwiftUIs */ = {
@@ -628,7 +658,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage outdated --xcode-warnings 2>/dev/null\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# /usr/local/bin/carthage outdated --xcode-warnings 2>/dev/null\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -666,8 +696,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC7BE90223910CD8002EB3FA /* TestMovieRepository.swift in Sources */,
 				AA9D642123767551007130CA /* CathayTests.swift in Sources */,
 				AA98E530237AEB3B00A0CEA2 /* ModelTests.swift in Sources */,
+				DC7BE8FE239108D9002EB3FA /* AllMovieViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

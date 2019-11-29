@@ -10,6 +10,7 @@ import XCTest
 @testable import Cathay
 
 class ModelTests: XCTestCase {
+    
     func testAllMovieModel() {
         XCTAssertNoThrow(try Bundle.main.getObject(fromJsonFile: "AllMovies") as AllMoviesResponseModel)
     }
