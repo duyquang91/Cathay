@@ -2,14 +2,14 @@ xcodeproj: ./Cathay.xcodeproj
 scheme: Cathay
 output_directory: ./test-reports
 ignore:
-  - ./Cathay/Common/Bases/ViewModelType.swift
-  - ./Cathay/Common/Constants.swift
-  - ./Cathay/Coordinate/MainStepper.swift
-  - ./Cathay/Coordinate/MainSteps.swift
-  - ./Cathay/Features/AllMovies/Views/AllMoviesViewController.swift
-  - ./Cathay/Features/AllMovies/Views/SwiftUIs/AllMoviesView.swift
-  - ./Cathay/Features/AllMovies/Views/SwiftUIs/MovieRow.swift
-  - ./Cathay/Features/MovieDetail/Views/MovieDetailViewController.swift
-  - ./Cathay/Features/MovieDetail/Views/SwiftUIs/MovieDetailView.swift
-  - ./Cathay/AppDelegate.swift
-  - ./Cathay/SceneDelegate.swift
+  - Cathay/Common/Bases/ViewModelType.swift
+  - Cathay/Common/Constants.swift
+  - Cathay/Coordinate/MainStepper.swift
+  - Cathay/Coordinate/MainSteps.swift
+  - Cathay/Features/AllMovies/Views/AllMoviesViewController.swift
+  - Cathay/Features/AllMovies/Views/SwiftUIs/AllMoviesView.swift
+  - Cathay/Features/AllMovies/Views/SwiftUIs/MovieRow.swift
+  - Cathay/Features/MovieDetail/Views/MovieDetailViewController.swift
+  - Cathay/Features/MovieDetail/Views/SwiftUIs/MovieDetailView.swift
+  - Cathay/AppDelegate.swift
+  - Cathay/SceneDelegate.swift
