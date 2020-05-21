@@ -3,8 +3,8 @@
   "iOS" : [
     {
       "name" : "RxFlow",
-      "hash" : "13606507cd65ebe641eb2a81f7db2b5508e660016074aaaccc345ac370b80299",
-      "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
+      "hash" : "4454af7d49e791d940a7b21ccec0572b48052947fc5ce6f36b08b1da8a73b551",
+      "swiftToolchainVersion" : "5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)"
     }
   ]
 }
